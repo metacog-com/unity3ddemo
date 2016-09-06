@@ -47,7 +47,8 @@ namespace MetacogSDK {
 		 * mapping between event-names and C# Classes.. 
 		 */ 
 		public static void Send(string eventName, object data, EventType eventType){
-			logger.Send (eventName, data, eventType);
+			if(logger!=null)
+				logger.Send (eventName, data, eventType);
 		}
 
 

@@ -10,8 +10,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: Unity Technologies
-  productName: Nightmares
+  companyName: Metacog.com
+  productName: metacog unity3d demo
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenStyle: 0
@@ -296,7 +296,6 @@ PlayerSettings:
   ps4PatchPkgPath: 
   ps4PatchLatestPkgPath: 
   ps4PatchChangeinfoPath: 
-  ps4PatchDayOne: 0
   ps4attribUserManagement: 0
   ps4attribMoveSupport: 0
   ps4attrib3DSupport: 0
@@ -453,8 +452,8 @@ PlayerSettings:
   WP8::ScriptingBackend: 2
   WebGL::ScriptingBackend: 1
   WebGL::audioCompressionFormat: 4
-  WebGL::exceptionSupport: 0
-  WebGL::memorySize: 256
+  WebGL::exceptionSupport: 2
+  WebGL::memorySize: 512
   iOS::Architecture: 2
   iOS::ScriptingBackend: 2
   boolPropertyNames:

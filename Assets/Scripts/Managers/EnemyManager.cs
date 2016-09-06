@@ -24,9 +24,9 @@ public class EnemyManager : MonoBehaviour
         }
 
         int spawnPointIndex = Random.Range (0, spawnPoints.Length);
-
+		Debug.Log ("instantiating " + enemy.name);
         Instantiate (enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
-		MetacogSDK.Metacog.Send("enemy_new", new EnemyNew(), MetacogSDK.EventType.MODEL);
+		MetacogSDK.Metacog.Send("enemy_new", new EnemyNew(enemy.name), MetacogSDK.EventType.MODEL);
 
     }
 }

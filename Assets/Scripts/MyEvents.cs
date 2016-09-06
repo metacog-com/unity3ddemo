@@ -40,7 +40,10 @@ namespace MyEvents
 	[Serializable]
 	public class EnemyNew
 	{
-		
+		public string name;
+		public EnemyNew(string name){
+			this.name = name; 
+		}
 	}
 
 	[Serializable]
