@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if !UNITY_WEBGL
+using System;
 
 namespace MetacogSDK
 {
@@ -72,4 +73,4 @@ namespace MetacogSDK
 
 	}
 }
-
+#endif

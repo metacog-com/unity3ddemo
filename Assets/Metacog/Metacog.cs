@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 using System; 
 using System.Collections;
+#if !UNITY_WEBGL
 using Amazon;
 using UnityEngine.Networking;
+#endif
 using System.Text; 
 
 namespace MetacogSDK {
@@ -21,8 +23,10 @@ namespace MetacogSDK {
 		public string SessionID;
 		public string LearnerToken;
 
-
+		#if !UNITY_WEBGL
 		public string apiEndpoint{ get; private set;}
+
+		public API api{ get; private set;}
 
 		//static in order to access it from other G.O.'s
 		private static Logger logger;
@@ -31,9 +35,7 @@ namespace MetacogSDK {
 		//to be added in each call to kinesis
 		public string sessionJson{ get; private set;}  
 
-
-		public API api{ get; private set;}
-
+		#endif
 
 
 		/**
@@ -47,17 +49,36 @@ namespace MetacogSDK {
 		 * mapping between event-names and C# Classes.. 
 		 */ 
 		public static void Send(string eventName, object data, EventType eventType){
+			#if UNITY_WEBGL
+			Debug.Log("sending in javascript");
+			Application.ExternalEval("initializeMetacog('send')");
+			#else
 			if(logger!=null)
 				logger.Send (eventName, data, eventType);
+			#endif
 		}
 
 
 		public void Start () {
+			#if UNITY_WEBGL
+			StartJS();
+			#else 
+			StartAWS();
+			#endif
+		}
+
+		#if UNITY_WEBGL
+		private void StartJS(){
+			Debug.Log ("startJS");
+			Application.ExternalEval("console.log('this was printed from c#');");
+		}
+		#else
+		private void StartAWS(){
 			UnityInitializer.AttachToGameObject(this.gameObject);
 			apiEndpoint = //"http://localhost:3000"; 
 				//"https://localhost:1337";
-			"https://testapi.metacog.com";
-		
+				"https://testapi.metacog.com";
+
 			if (LearnerID.Length == 0) {
 				LearnerID = "Learner_"+ DateTime.Now.ToString("hhmmss")+(new System.Random().Next());
 			}
@@ -70,6 +91,7 @@ namespace MetacogSDK {
 			api = new API (this); 
 			logger = new Logger(this);
 		}
+		#endif
 
 		/*
 		 * returns the following stringifyed json:
@@ -164,12 +186,10 @@ namespace MetacogSDK {
 		 * 
 		 */
 		public void Update(){
+			#if !UNITY_WEBGL
 			logger.update (Time.deltaTime);
+			#endif
 		}
-
-
-
-
 	}
 }
 

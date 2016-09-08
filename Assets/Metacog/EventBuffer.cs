@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if !UNITY_WEBGL
+using System;
 using System.Text; 
 using UnityEngine;
 
@@ -68,4 +69,4 @@ namespace MetacogSDK
 
 	}
 }
-
+#endif

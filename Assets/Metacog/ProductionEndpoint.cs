@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if !UNITY_WEBGL
+using System;
 using Amazon.Kinesis;
 using Amazon.Kinesis.Model;
 using System.IO;
@@ -151,4 +152,4 @@ namespace MetacogSDK
 
   }
 }
-
+#endif
