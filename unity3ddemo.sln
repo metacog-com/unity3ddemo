@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{F07051AC-2281-AD6F-A65B-5F29B652F8EA}") = "unity3ddemo", "Assembly-CSharp.csproj", "{1B644359-0773-E66E-6E53-6E329F450302}"
 EndProject
-Project("{F07051AC-2281-AD6F-A65B-5F29B652F8EA}") = "unity3ddemo", "Assembly-CSharp-Editor.csproj", "{952E7A1F-F67E-03C0-F9F8-CB348186E635}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,10 +13,6 @@ Global
 		{1B644359-0773-E66E-6E53-6E329F450302}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B644359-0773-E66E-6E53-6E329F450302}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B644359-0773-E66E-6E53-6E329F450302}.Release|Any CPU.Build.0 = Release|Any CPU
-		{952E7A1F-F67E-03C0-F9F8-CB348186E635}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{952E7A1F-F67E-03C0-F9F8-CB348186E635}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{952E7A1F-F67E-03C0-F9F8-CB348186E635}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{952E7A1F-F67E-03C0-F9F8-CB348186E635}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

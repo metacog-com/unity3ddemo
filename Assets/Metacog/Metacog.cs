@@ -50,8 +50,8 @@ namespace MetacogSDK {
 		 */ 
 		public static void Send(string eventName, object data, EventType eventType){
 			#if UNITY_WEBGL
-			Debug.Log("sending in javascript");
-			Application.ExternalEval("initializeMetacog('send')");
+			string json = JsonUtility.ToJson (data);
+			Application.ExternalEval("sendMetacog('"+eventName + "', '"+json+"', '"+eventType+"')");
 			#else
 			if(logger!=null)
 				logger.Send (eventName, data, eventType);
@@ -60,6 +60,7 @@ namespace MetacogSDK {
 
 
 		public void Start () {
+			Debug.Log ("START HAD BEEN CALLED");
 			#if UNITY_WEBGL
 			StartJS();
 			#else 
@@ -70,7 +71,7 @@ namespace MetacogSDK {
 		#if UNITY_WEBGL
 		private void StartJS(){
 			Debug.Log ("startJS");
-			Application.ExternalEval("console.log('this was printed from c#');");
+			Application.ExternalEval("initMetacog('"+buildSessionJson()+"');");
 		}
 		#else
 		private void StartAWS(){
@@ -133,6 +134,7 @@ namespace MetacogSDK {
 				return "\"" + val + "\"";
 			}
 		}
+
 
 		/// source: http://www.fluxbytes.com/csharp/convert-datetime-to-unix-time-in-c/
 		/// <summary>

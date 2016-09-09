@@ -12,6 +12,7 @@ public class EnemyManager : MonoBehaviour
 
     void Start ()
     {
+		Debug.Log ("STARTING ENEMY MANAGER"); 
         InvokeRepeating ("Spawn2", spawnTime, spawnTime);
     }
 
