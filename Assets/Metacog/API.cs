@@ -52,14 +52,9 @@ namespace MetacogSDK
 
 		private IEnumerator WaitForRequest(UnityWebRequest request, apiResponse resp){
 			yield return request.Send(); 
-			Debug.Log ("got an answer from the API!");
-			//if (request.error == null) {
-			Debug.Log ("data: " + request.downloadHandler.text);
-			//} else {
-			Debug.Log ("error: " + request.error);
-			Debug.Log ("responseCode: " + request.responseCode);
+			//Debug.Log ("error: " + request.error);
+			//Debug.Log ("responseCode: " + request.responseCode);
 			resp (request.responseCode, request.downloadHandler.text);
-			//}
 		}
 	
 

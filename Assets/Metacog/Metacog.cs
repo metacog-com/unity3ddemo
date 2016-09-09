@@ -60,7 +60,6 @@ namespace MetacogSDK {
 
 
 		public void Start () {
-			Debug.Log ("START HAD BEEN CALLED");
 			#if UNITY_WEBGL
 			StartJS();
 			#else 
@@ -70,7 +69,6 @@ namespace MetacogSDK {
 
 		#if UNITY_WEBGL
 		private void StartJS(){
-			Debug.Log ("startJS");
 			Application.ExternalEval("initMetacog('"+buildSessionJson()+"');");
 		}
 		#else
@@ -160,29 +158,6 @@ namespace MetacogSDK {
 			return sTime.AddSeconds(unixtime);
 		}
 
-		/**
-		 * 
-		 */ 
-		//public void Reset(){
-		//}
-
-
-
-
-		/**
-		 * 
-		 */
-		//public static void Start(){
-		//	logger.Start();
-		//}
-
-		/**
-		 * 
-		 
-		public static void Stop(){
-			logger.Stop();
-		}
-*/
 
 		/**
 		 * 
