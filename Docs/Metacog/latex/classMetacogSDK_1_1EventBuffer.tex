@@ -1,0 +1,37 @@
+\hypertarget{classMetacogSDK_1_1EventBuffer}{}\section{Metacog\+S\+D\+K.\+Event\+Buffer Class Reference}
+\label{classMetacogSDK_1_1EventBuffer}\index{Metacog\+S\+D\+K.\+Event\+Buffer@{Metacog\+S\+D\+K.\+Event\+Buffer}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Event\+Buffer} (\hyperlink{classMetacogSDK_1_1Metacog}{Metacog} mc)\hypertarget{classMetacogSDK_1_1EventBuffer_a26f471aeadaa2c65e72d9d5c5fca85fb}{}\label{classMetacogSDK_1_1EventBuffer_a26f471aeadaa2c65e72d9d5c5fca85fb}
+
+\item 
+bool {\bfseries Add} (string json)\hypertarget{classMetacogSDK_1_1EventBuffer_afc7f88e414442994bed411ddd5faaabe}{}\label{classMetacogSDK_1_1EventBuffer_afc7f88e414442994bed411ddd5faaabe}
+
+\item 
+string \hyperlink{classMetacogSDK_1_1EventBuffer_a0f949874b91790b01292d2acc2feec84}{flush} ()
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries counter}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}\hypertarget{classMetacogSDK_1_1EventBuffer_a5e138ae320239d55d901a693146273e9}{}\label{classMetacogSDK_1_1EventBuffer_a5e138ae320239d55d901a693146273e9}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a in-\/memory buffer to assemble batches of events. once a batch hits it max size, it won\textquotesingle{}t accept more data until a call to flush is done. 
+
+\subsection{Member Function Documentation}
+\index{Metacog\+S\+D\+K\+::\+Event\+Buffer@{Metacog\+S\+D\+K\+::\+Event\+Buffer}!flush@{flush}}
+\index{flush@{flush}!Metacog\+S\+D\+K\+::\+Event\+Buffer@{Metacog\+S\+D\+K\+::\+Event\+Buffer}}
+\subsubsection[{\texorpdfstring{flush()}{flush()}}]{\setlength{\rightskip}{0pt plus 5cm}string Metacog\+S\+D\+K.\+Event\+Buffer.\+flush (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMetacogSDK_1_1EventBuffer_a0f949874b91790b01292d2acc2feec84}{}\label{classMetacogSDK_1_1EventBuffer_a0f949874b91790b01292d2acc2feec84}
+assemble a json batch of events with the current data and return it. resets the buffer so it will acept events again. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/cesar/\+Projects/development/unity3ddemo/\+Assets/\+Metacog/Event\+Buffer.\+cs\end{DoxyCompactItemize}

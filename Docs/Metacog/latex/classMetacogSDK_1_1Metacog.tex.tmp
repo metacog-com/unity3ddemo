@@ -1,0 +1,120 @@
+\hypertarget{classMetacogSDK_1_1Metacog}{}\section{Metacog\+S\+D\+K.\+Metacog Class Reference}
+\label{classMetacogSDK_1_1Metacog}\index{Metacog\+S\+D\+K.\+Metacog@{Metacog\+S\+D\+K.\+Metacog}}
+
+
+Inheritance diagram for Metacog\+S\+D\+K.\+Metacog\+:
+% FIG 0
+
+
+Collaboration diagram for Metacog\+S\+D\+K.\+Metacog\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Start} ()\hypertarget{classMetacogSDK_1_1Metacog_abc4258a6c3a76a3b077d9388ea25b058}{}\label{classMetacogSDK_1_1Metacog_abc4258a6c3a76a3b077d9388ea25b058}
+
+\item 
+void {\bfseries Update} ()\hypertarget{classMetacogSDK_1_1Metacog_a8e454d49db2e9dca3a52b04ef7d2167a}{}\label{classMetacogSDK_1_1Metacog_a8e454d49db2e9dca3a52b04ef7d2167a}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classMetacogSDK_1_1Metacog_a6283ef2b5e6f75c90700f5021542aea3}{Send} (string event\+Name, object data, Event\+Type event\+Type)
+\item 
+static long \hyperlink{classMetacogSDK_1_1Metacog_a348e517c0a66e22ed234e08564f5f988}{Convert\+To\+Unix\+Time} (Date\+Time datetime)
+\begin{DoxyCompactList}\small\item\em Convert a date time object to Unix time representation. \end{DoxyCompactList}\item 
+static Date\+Time \hyperlink{classMetacogSDK_1_1Metacog_aa568382863f982afacb50869ffd6f1ac}{Unix\+Time\+To\+Date\+Time} (long unixtime)
+\begin{DoxyCompactList}\small\item\em Convert Unix time value to a Date\+Time object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries Publisher\+ID}\hypertarget{classMetacogSDK_1_1Metacog_a79e2799ef2be7cf0e6a5094eaa3aa5d8}{}\label{classMetacogSDK_1_1Metacog_a79e2799ef2be7cf0e6a5094eaa3aa5d8}
+
+\item 
+string {\bfseries Application\+ID}\hypertarget{classMetacogSDK_1_1Metacog_ac236c316e574b47ca2967ac37b28e355}{}\label{classMetacogSDK_1_1Metacog_ac236c316e574b47ca2967ac37b28e355}
+
+\item 
+string {\bfseries Widget\+ID}\hypertarget{classMetacogSDK_1_1Metacog_afed6631e5525c7f9a25bdd09b91cc724}{}\label{classMetacogSDK_1_1Metacog_afed6631e5525c7f9a25bdd09b91cc724}
+
+\item 
+string {\bfseries Learner\+ID}\hypertarget{classMetacogSDK_1_1Metacog_abc183970e5c9c1f9e7d3c477ed48d5eb}{}\label{classMetacogSDK_1_1Metacog_abc183970e5c9c1f9e7d3c477ed48d5eb}
+
+\item 
+string {\bfseries Session\+ID}\hypertarget{classMetacogSDK_1_1Metacog_ab6e2b314e5c19cbad4e1065460e38856}{}\label{classMetacogSDK_1_1Metacog_ab6e2b314e5c19cbad4e1065460e38856}
+
+\item 
+string {\bfseries Learner\+Token}\hypertarget{classMetacogSDK_1_1Metacog_a11e9fbd9fd784c37b46b9415f4cbab80}{}\label{classMetacogSDK_1_1Metacog_a11e9fbd9fd784c37b46b9415f4cbab80}
+
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries api\+Endpoint}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}\hypertarget{classMetacogSDK_1_1Metacog_af132a9c7a11c460f6f755db7ccd9a48e}{}\label{classMetacogSDK_1_1Metacog_af132a9c7a11c460f6f755db7ccd9a48e}
+
+\item 
+\hyperlink{classMetacogSDK_1_1API}{A\+PI} {\bfseries api}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}\hypertarget{classMetacogSDK_1_1Metacog_a5e43feac01cfe2f3e79be96c3b13d8dc}{}\label{classMetacogSDK_1_1Metacog_a5e43feac01cfe2f3e79be96c3b13d8dc}
+
+\item 
+string {\bfseries session\+Json}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}\hypertarget{classMetacogSDK_1_1Metacog_aeed01d06ccfb7868201a671299458816}{}\label{classMetacogSDK_1_1Metacog_aeed01d06ccfb7868201a671299458816}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Metacog\+S\+D\+K\+::\+Metacog@{Metacog\+S\+D\+K\+::\+Metacog}!Convert\+To\+Unix\+Time@{Convert\+To\+Unix\+Time}}
+\index{Convert\+To\+Unix\+Time@{Convert\+To\+Unix\+Time}!Metacog\+S\+D\+K\+::\+Metacog@{Metacog\+S\+D\+K\+::\+Metacog}}
+\subsubsection[{\texorpdfstring{Convert\+To\+Unix\+Time(\+Date\+Time datetime)}{ConvertToUnixTime(DateTime datetime)}}]{\setlength{\rightskip}{0pt plus 5cm}static long Metacog\+S\+D\+K.\+Metacog.\+Convert\+To\+Unix\+Time (
+\begin{DoxyParamCaption}
+\item[{Date\+Time}]{datetime}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classMetacogSDK_1_1Metacog_a348e517c0a66e22ed234e08564f5f988}{}\label{classMetacogSDK_1_1Metacog_a348e517c0a66e22ed234e08564f5f988}
+
+
+Convert a date time object to Unix time representation. 
+
+source\+: \href{http://www.fluxbytes.com/csharp/convert-datetime-to-unix-time-in-c/}{\tt http\+://www.\+fluxbytes.\+com/csharp/convert-\/datetime-\/to-\/unix-\/time-\/in-\/c/}
+
+
+\begin{DoxyParams}{Parameters}
+{\em datetime} & The datetime object to convert to Unix time stamp.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a numerical representation (Unix time) of the Date\+Time object.
+\end{DoxyReturn}
+\index{Metacog\+S\+D\+K\+::\+Metacog@{Metacog\+S\+D\+K\+::\+Metacog}!Send@{Send}}
+\index{Send@{Send}!Metacog\+S\+D\+K\+::\+Metacog@{Metacog\+S\+D\+K\+::\+Metacog}}
+\subsubsection[{\texorpdfstring{Send(string event\+Name, object data, Event\+Type event\+Type)}{Send(string eventName, object data, EventType eventType)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Metacog\+S\+D\+K.\+Metacog.\+Send (
+\begin{DoxyParamCaption}
+\item[{string}]{event\+Name, }
+\item[{object}]{data, }
+\item[{Event\+Type}]{event\+Type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classMetacogSDK_1_1Metacog_a6283ef2b5e6f75c90700f5021542aea3}{}\label{classMetacogSDK_1_1Metacog_a6283ef2b5e6f75c90700f5021542aea3}
+append a event to the queue and eventually, send it to the \hyperlink{classMetacogSDK_1_1Metacog}{Metacog} platform. the developer is responsible of implement custom classes for each one of his events. those classes should be annoated as serializable. \+: note that for playback, we will need to deserialize the data. in C\#, the target type should be known before hand. it means that we may need to provide some mechanism to register a mapping between event-\/names and C\# Classes.. \index{Metacog\+S\+D\+K\+::\+Metacog@{Metacog\+S\+D\+K\+::\+Metacog}!Unix\+Time\+To\+Date\+Time@{Unix\+Time\+To\+Date\+Time}}
+\index{Unix\+Time\+To\+Date\+Time@{Unix\+Time\+To\+Date\+Time}!Metacog\+S\+D\+K\+::\+Metacog@{Metacog\+S\+D\+K\+::\+Metacog}}
+\subsubsection[{\texorpdfstring{Unix\+Time\+To\+Date\+Time(long unixtime)}{UnixTimeToDateTime(long unixtime)}}]{\setlength{\rightskip}{0pt plus 5cm}static Date\+Time Metacog\+S\+D\+K.\+Metacog.\+Unix\+Time\+To\+Date\+Time (
+\begin{DoxyParamCaption}
+\item[{long}]{unixtime}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classMetacogSDK_1_1Metacog_aa568382863f982afacb50869ffd6f1ac}{}\label{classMetacogSDK_1_1Metacog_aa568382863f982afacb50869ffd6f1ac}
+
+
+Convert Unix time value to a Date\+Time object. 
+
+source\+: \href{http://www.fluxbytes.com/csharp/convert-datetime-to-unix-time-in-c/}{\tt http\+://www.\+fluxbytes.\+com/csharp/convert-\/datetime-\/to-\/unix-\/time-\/in-\/c/}
+
+
+\begin{DoxyParams}{Parameters}
+{\em unixtime} & The Unix time stamp you want to convert to Date\+Time.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a Date\+Time object that represents value of the Unix time.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/cesar/\+Projects/development/unity3ddemo/\+Assets/\+Metacog/Metacog.\+cs\end{DoxyCompactItemize}
