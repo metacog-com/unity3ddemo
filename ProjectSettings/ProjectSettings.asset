@@ -296,6 +296,7 @@ PlayerSettings:
   ps4PatchPkgPath: 
   ps4PatchLatestPkgPath: 
   ps4PatchChangeinfoPath: 
+  ps4PatchDayOne: 0
   ps4attribUserManagement: 0
   ps4attribMoveSupport: 0
   ps4attrib3DSupport: 0
@@ -562,5 +563,5 @@ PlayerSettings:
   tvOS::VR::enabledDevices: []
   cloudProjectId: 77a4aae5-7bb5-4dfb-adf7-0d3d5b9e0481
   projectName: Nightmares
-  organizationId: cesarpachon_metacog
+  organizationId: metacog
   cloudEnabled: 0
