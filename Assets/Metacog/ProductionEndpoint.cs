@@ -28,8 +28,6 @@ namespace MetacogSDK
 		public void init(){
 			mc.api.initKinesis (new API.apiResponse(this.initKinesisResponse));
 		}
-	
-
 
 		/* expected:
 		 */ 
@@ -62,11 +60,9 @@ namespace MetacogSDK
 					{
 						if (responseObject.Exception == null)
 						{
-							Debug.Log(string.Format("Successfully put record with sequence number '{0}'.", responseObject.Response.SequenceNumber));
 						}
 						else
 						{
-							Debug.Log(responseObject.Exception);
 							//inject the event again for further attempts of sending..
 							eventStorage.Add(batch);
 						}
@@ -87,7 +83,6 @@ namespace MetacogSDK
 				for(int i=0; i< responseObject.Response.Records.Count; ++i){
 					PutRecordsResultEntry entry = responseObject.Response.Records[i];
 					if(entry.ErrorCode != null){
-						Debug.Log("error: " + entry.ErrorCode + " , " + entry.ErrorMessage); 
 						eventStorage.Add(batches[i]);
 					}	
 				}
@@ -103,14 +98,12 @@ namespace MetacogSDK
 		 */ 
 		public void ProcessQueue(EventBuffer eventBuffer, EventStorage eventStorage){
 			if (busy) {
-				Debug.Log ("busy! ignore");
 				return; 
 			}
 			busy = true;
 
 			if (eventStorage.IsEmpty()) {
 				if (eventBuffer.counter == 0) {
-					Debug.Log ("no events. skip");
 					busy = false;
 					return;
 				} else {
@@ -126,27 +119,14 @@ namespace MetacogSDK
 				
 				MemoryStream memoryStream = new MemoryStream();
 				StreamWriter streamWriter = new StreamWriter(memoryStream);
-				Debug.Log ("batch.Length " + batch.Length);
 				streamWriter.Write(batch);
-
-				//Debug.Log ("1: " + memoryStream.Length); 
 				streamWriter.Flush ();
-				//Debug.Log ("2: " + memoryStream.Length); 
-				//streamWriter.Close();
-					
-				//Debug.Log ("3: " + memoryStream.Length); 
-
 				PutRecordsRequestEntry entry = new PutRecordsRequestEntry();
 				entry.PartitionKey = "partitionKey";
 				entry.Data = memoryStream; 
-				//Debug.Log ("entry.data.length:"+entry.Data.Length);
 				entries.Add(entry);
 				batches.Add(batch);
-
-				//Debug.Log ("4: " + memoryStream.Length); 
-				Debug.Log(batch);
 			} 
-			Debug.Log ("sending batches " + batches.Count);
 			sendBatches (batches, entries, eventStorage);
 		}
 
