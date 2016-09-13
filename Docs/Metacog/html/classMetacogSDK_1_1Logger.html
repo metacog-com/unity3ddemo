@@ -96,25 +96,173 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">MetacogSDK.Logger Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Continous pushing of events to the <a class="el" href="classMetacogSDK_1_1Metacog.html" title="MonoBehavior that should be added to the Unity3D project. ">Metacog</a> platform.  
+ <a href="classMetacogSDK_1_1Logger.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3e137315344b8a7469d863bfd3495c2c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e137315344b8a7469d863bfd3495c2c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Logger</b> (<a class="el" href="classMetacogSDK_1_1Metacog.html">Metacog</a> mc)</td></tr>
+<tr class="memitem:a3e137315344b8a7469d863bfd3495c2c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetacogSDK_1_1Logger.html#a3e137315344b8a7469d863bfd3495c2c">Logger</a> (<a class="el" href="classMetacogSDK_1_1Metacog.html">Metacog</a> mc)</td></tr>
+<tr class="memdesc:a3e137315344b8a7469d863bfd3495c2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. initializes event buffer and production endpoint.  <a href="#a3e137315344b8a7469d863bfd3495c2c">More...</a><br /></td></tr>
 <tr class="separator:a3e137315344b8a7469d863bfd3495c2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3b730166a419e25aa9a5c22a0d68690"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3b730166a419e25aa9a5c22a0d68690"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Send</b> (string eventName, object data, <a class="el" href="namespaceMetacogSDK.html#a9a46be6b2e98a6ae7460c93faf69728e">EventType</a> eventType)</td></tr>
+<tr class="memitem:aa3b730166a419e25aa9a5c22a0d68690"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetacogSDK_1_1Logger.html#aa3b730166a419e25aa9a5c22a0d68690">Send</a> (string eventName, object data, <a class="el" href="namespaceMetacogSDK.html#a9a46be6b2e98a6ae7460c93faf69728e">EventType</a> eventType)</td></tr>
+<tr class="memdesc:aa3b730166a419e25aa9a5c22a0d68690"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store event for later sending to <a class="el" href="classMetacogSDK_1_1Metacog.html" title="MonoBehavior that should be added to the Unity3D project. ">Metacog</a>.  <a href="#aa3b730166a419e25aa9a5c22a0d68690">More...</a><br /></td></tr>
 <tr class="separator:aa3b730166a419e25aa9a5c22a0d68690"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5394b2435a693ba6b7b7745bb6d93129"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5394b2435a693ba6b7b7745bb6d93129"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Start</b> ()</td></tr>
+<tr class="memitem:a5394b2435a693ba6b7b7745bb6d93129"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetacogSDK_1_1Logger.html#a5394b2435a693ba6b7b7745bb6d93129">Start</a> ()</td></tr>
+<tr class="memdesc:a5394b2435a693ba6b7b7745bb6d93129"><td class="mdescLeft">&#160;</td><td class="mdescRight">reset timers and set running status.  <a href="#a5394b2435a693ba6b7b7745bb6d93129">More...</a><br /></td></tr>
 <tr class="separator:a5394b2435a693ba6b7b7745bb6d93129"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4539588c58009fd4343a83757cf5b84f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4539588c58009fd4343a83757cf5b84f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Stop</b> ()</td></tr>
 <tr class="separator:a4539588c58009fd4343a83757cf5b84f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42cbf5df7e9d83ee96010c63eb62d66a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42cbf5df7e9d83ee96010c63eb62d66a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (float dt)</td></tr>
+<tr class="memitem:a42cbf5df7e9d83ee96010c63eb62d66a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetacogSDK_1_1Logger.html#a42cbf5df7e9d83ee96010c63eb62d66a">update</a> (float dt)</td></tr>
+<tr class="memdesc:a42cbf5df7e9d83ee96010c63eb62d66a"><td class="mdescLeft">&#160;</td><td class="mdescRight">update timer and process the queue of events.  <a href="#a42cbf5df7e9d83ee96010c63eb62d66a">More...</a><br /></td></tr>
 <tr class="separator:a42cbf5df7e9d83ee96010c63eb62d66a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Continous pushing of events to the <a class="el" href="classMetacogSDK_1_1Metacog.html" title="MonoBehavior that should be added to the Unity3D project. ">Metacog</a> platform. </p>
+<p>This class receive events and store them into batches, that are sent periodically to the <a class="el" href="classMetacogSDK_1_1Metacog.html" title="MonoBehavior that should be added to the Unity3D project. ">Metacog</a> platform.  </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a3e137315344b8a7469d863bfd3495c2c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MetacogSDK.Logger.Logger </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMetacogSDK_1_1Metacog.html">Metacog</a>&#160;</td>
+          <td class="paramname"><em>mc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor. initializes event buffer and production endpoint. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mc</td><td><a class="el" href="classMetacogSDK_1_1Metacog.html" title="MonoBehavior that should be added to the Unity3D project. ">Metacog</a> instance.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="aa3b730166a419e25aa9a5c22a0d68690"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MetacogSDK.Logger.Send </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>eventName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceMetacogSDK.html#a9a46be6b2e98a6ae7460c93faf69728e">EventType</a>&#160;</td>
+          <td class="paramname"><em>eventType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Store event for later sending to <a class="el" href="classMetacogSDK_1_1Metacog.html" title="MonoBehavior that should be added to the Unity3D project. ">Metacog</a>. </p>
+<p>A timestamp and a incremental index are added at queue-insertion time.<br />
+ The event is serialized into a json string, then pushed into the eventBuffer (memory). if the buffer is full, it will flush into the eventStorage. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eventName</td><td>Event name.</td></tr>
+    <tr><td class="paramname">data</td><td>Serializable object</td></tr>
+    <tr><td class="paramname">eventType</td><td>Event type.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5394b2435a693ba6b7b7745bb6d93129"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MetacogSDK.Logger.Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>reset timers and set running status. </p>
+
+</div>
+</div>
+<a class="anchor" id="a42cbf5df7e9d83ee96010c63eb62d66a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MetacogSDK.Logger.update </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>update timer and process the queue of events. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dt</td><td>Delta time in seconds</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/cesar/Projects/development/unity3ddemo/Assets/Metacog/Logger.cs</li>
 </ul>

@@ -96,19 +96,97 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">MetacogSDK.API Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Wrapper for network calls to the <a class="el" href="classMetacogSDK_1_1Metacog.html" title="MonoBehavior that should be added to the Unity3D project. ">Metacog</a> RESTFul <a class="el" href="classMetacogSDK_1_1API.html" title="Wrapper for network calls to the Metacog RESTFul API. ">API</a>.  
+ <a href="classMetacogSDK_1_1API.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a32f228252de73a7e47dffd674c9c7184"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a32f228252de73a7e47dffd674c9c7184"></a>
-delegate void&#160;</td><td class="memItemRight" valign="bottom"><b>apiResponse</b> (long resCode, string resTxt)</td></tr>
+<tr class="memitem:a32f228252de73a7e47dffd674c9c7184"><td class="memItemLeft" align="right" valign="top">delegate void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetacogSDK_1_1API.html#a32f228252de73a7e47dffd674c9c7184">apiResponse</a> (long resCode, string resTxt)</td></tr>
+<tr class="memdesc:a32f228252de73a7e47dffd674c9c7184"><td class="mdescLeft">&#160;</td><td class="mdescRight">handle the response for all RESTFul calls  <a href="#a32f228252de73a7e47dffd674c9c7184">More...</a><br /></td></tr>
 <tr class="separator:a32f228252de73a7e47dffd674c9c7184"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4de3d5a351dc955c280febc2aed43c02"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4de3d5a351dc955c280febc2aed43c02"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>API</b> (<a class="el" href="classMetacogSDK_1_1Metacog.html">Metacog</a> mc)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetacogSDK_1_1API.html#a4de3d5a351dc955c280febc2aed43c02">API</a> (<a class="el" href="classMetacogSDK_1_1Metacog.html">Metacog</a> mc)</td></tr>
+<tr class="memdesc:a4de3d5a351dc955c280febc2aed43c02"><td class="mdescLeft">&#160;</td><td class="mdescRight"><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mc</td><td>Reference to the <a class="el" href="classMetacogSDK_1_1Metacog.html" title="MonoBehavior that should be added to the Unity3D project. ">Metacog</a> object</td></tr>
+  </table>
+  </dd>
+</dl>
+<br /></td></tr>
 <tr class="separator:a4de3d5a351dc955c280febc2aed43c02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ca2987250fe76524ec9e959676dc237"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ca2987250fe76524ec9e959676dc237"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>initKinesis</b> (apiResponse resp)</td></tr>
+<tr class="memitem:a8ca2987250fe76524ec9e959676dc237"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetacogSDK_1_1API.html#a8ca2987250fe76524ec9e959676dc237">initKinesis</a> (<a class="el" href="classMetacogSDK_1_1API.html#a32f228252de73a7e47dffd674c9c7184">apiResponse</a> resp)</td></tr>
+<tr class="memdesc:a8ca2987250fe76524ec9e959676dc237"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtains credentials for the digesting endpoint.  <a href="#a8ca2987250fe76524ec9e959676dc237">More...</a><br /></td></tr>
 <tr class="separator:a8ca2987250fe76524ec9e959676dc237"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Wrapper for network calls to the <a class="el" href="classMetacogSDK_1_1Metacog.html" title="MonoBehavior that should be added to the Unity3D project. ">Metacog</a> RESTFul <a class="el" href="classMetacogSDK_1_1API.html" title="Wrapper for network calls to the Metacog RESTFul API. ">API</a>. </p>
+<p>All the services of the <a class="el" href="classMetacogSDK_1_1Metacog.html" title="MonoBehavior that should be added to the Unity3D project. ">Metacog</a> Platform are available through its RESTful <a class="el" href="classMetacogSDK_1_1API.html" title="Wrapper for network calls to the Metacog RESTFul API. ">API</a>.<br />
+ Check the <a class="el" href="classMetacogSDK_1_1API.html" title="Wrapper for network calls to the Metacog RESTFul API. ">API</a> documentation at <a href="https://developer.metacog.com/sandbox">https://developer.metacog.com/sandbox</a>  </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a32f228252de73a7e47dffd674c9c7184"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">delegate void MetacogSDK.API.apiResponse </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>resCode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>resTxt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>handle the response for all RESTFul calls </p>
+
+</div>
+</div>
+<a class="anchor" id="a8ca2987250fe76524ec9e959676dc237"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MetacogSDK.API.initKinesis </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMetacogSDK_1_1API.html#a32f228252de73a7e47dffd674c9c7184">apiResponse</a>&#160;</td>
+          <td class="paramname"><em>resp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtains credentials for the digesting endpoint. </p>
+<p>Logging to <a class="el" href="classMetacogSDK_1_1Metacog.html" title="MonoBehavior that should be added to the Unity3D project. ">Metacog</a> is done through the Kinesis AWS service.<br />
+ Provisional credentials for this services should be obtained through the /access/ set of endpoints at <a class="el" href="classMetacogSDK_1_1Metacog.html" title="MonoBehavior that should be added to the Unity3D project. ">Metacog</a>'s <a class="el" href="classMetacogSDK_1_1API.html" title="Wrapper for network calls to the Metacog RESTFul API. ">API</a>. <br />
+ </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resp</td><td>callback</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/cesar/Projects/development/unity3ddemo/Assets/Metacog/API.cs</li>
 </ul>

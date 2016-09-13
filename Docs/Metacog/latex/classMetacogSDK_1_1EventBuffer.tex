@@ -1,16 +1,19 @@
 \hypertarget{classMetacogSDK_1_1EventBuffer}{}\section{Metacog\+S\+D\+K.\+Event\+Buffer Class Reference}
 \label{classMetacogSDK_1_1EventBuffer}\index{Metacog\+S\+D\+K.\+Event\+Buffer@{Metacog\+S\+D\+K.\+Event\+Buffer}}
+
+
+a in-\/memory buffer to assemble batches of events.  
+
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\bfseries Event\+Buffer} (\hyperlink{classMetacogSDK_1_1Metacog}{Metacog} mc)\hypertarget{classMetacogSDK_1_1EventBuffer_a26f471aeadaa2c65e72d9d5c5fca85fb}{}\label{classMetacogSDK_1_1EventBuffer_a26f471aeadaa2c65e72d9d5c5fca85fb}
-
-\item 
-bool {\bfseries Add} (string json)\hypertarget{classMetacogSDK_1_1EventBuffer_afc7f88e414442994bed411ddd5faaabe}{}\label{classMetacogSDK_1_1EventBuffer_afc7f88e414442994bed411ddd5faaabe}
-
-\item 
+\hyperlink{classMetacogSDK_1_1EventBuffer_a26f471aeadaa2c65e72d9d5c5fca85fb}{Event\+Buffer} (\hyperlink{classMetacogSDK_1_1Metacog}{Metacog} mc)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \hyperlink{classMetacogSDK_1_1EventBuffer}{Metacog\+S\+D\+K.\+Event\+Buffer} class. \end{DoxyCompactList}\item 
+bool \hyperlink{classMetacogSDK_1_1EventBuffer_afc7f88e414442994bed411ddd5faaabe}{Add} (string json)
+\begin{DoxyCompactList}\small\item\em add a json event to memory. \end{DoxyCompactList}\item 
 string \hyperlink{classMetacogSDK_1_1EventBuffer_a0f949874b91790b01292d2acc2feec84}{flush} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em removes the stored events and returns them as a json batch. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
@@ -20,9 +23,46 @@ int {\bfseries counter}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}\hypertarge
 
 
 \subsection{Detailed Description}
-a in-\/memory buffer to assemble batches of events. once a batch hits it max size, it won\textquotesingle{}t accept more data until a call to flush is done. 
+a in-\/memory buffer to assemble batches of events. 
+
+once a batch hits it max size, it won\textquotesingle{}t accept more data until a call to flush is done.  
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Metacog\+S\+D\+K\+::\+Event\+Buffer@{Metacog\+S\+D\+K\+::\+Event\+Buffer}!Event\+Buffer@{Event\+Buffer}}
+\index{Event\+Buffer@{Event\+Buffer}!Metacog\+S\+D\+K\+::\+Event\+Buffer@{Metacog\+S\+D\+K\+::\+Event\+Buffer}}
+\subsubsection[{\texorpdfstring{Event\+Buffer(\+Metacog mc)}{EventBuffer(Metacog mc)}}]{\setlength{\rightskip}{0pt plus 5cm}Metacog\+S\+D\+K.\+Event\+Buffer.\+Event\+Buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf Metacog}}]{mc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMetacogSDK_1_1EventBuffer_a26f471aeadaa2c65e72d9d5c5fca85fb}{}\label{classMetacogSDK_1_1EventBuffer_a26f471aeadaa2c65e72d9d5c5fca85fb}
+
+
+Initializes a new instance of the \hyperlink{classMetacogSDK_1_1EventBuffer}{Metacog\+S\+D\+K.\+Event\+Buffer} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mc} & \hyperlink{classMetacogSDK_1_1Metacog}{Metacog} instance used to obtain session information\\
+\hline
+\end{DoxyParams}
+
 
 \subsection{Member Function Documentation}
+\index{Metacog\+S\+D\+K\+::\+Event\+Buffer@{Metacog\+S\+D\+K\+::\+Event\+Buffer}!Add@{Add}}
+\index{Add@{Add}!Metacog\+S\+D\+K\+::\+Event\+Buffer@{Metacog\+S\+D\+K\+::\+Event\+Buffer}}
+\subsubsection[{\texorpdfstring{Add(string json)}{Add(string json)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Metacog\+S\+D\+K.\+Event\+Buffer.\+Add (
+\begin{DoxyParamCaption}
+\item[{string}]{json}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMetacogSDK_1_1EventBuffer_afc7f88e414442994bed411ddd5faaabe}{}\label{classMetacogSDK_1_1EventBuffer_afc7f88e414442994bed411ddd5faaabe}
+
+
+add a json event to memory. 
+
+returns true if can accept more events, and false if not. invoking Add after it returned false will throw exception. use flush to reset the buffer and start accepting new events.  
+\begin{DoxyParams}{Parameters}
+{\em json} & \hyperlink{classMetacogSDK_1_1Metacog}{Metacog} event in as json string\\
+\hline
+\end{DoxyParams}
 \index{Metacog\+S\+D\+K\+::\+Event\+Buffer@{Metacog\+S\+D\+K\+::\+Event\+Buffer}!flush@{flush}}
 \index{flush@{flush}!Metacog\+S\+D\+K\+::\+Event\+Buffer@{Metacog\+S\+D\+K\+::\+Event\+Buffer}}
 \subsubsection[{\texorpdfstring{flush()}{flush()}}]{\setlength{\rightskip}{0pt plus 5cm}string Metacog\+S\+D\+K.\+Event\+Buffer.\+flush (
@@ -30,7 +70,11 @@ a in-\/memory buffer to assemble batches of events. once a batch hits it max siz
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMetacogSDK_1_1EventBuffer_a0f949874b91790b01292d2acc2feec84}{}\label{classMetacogSDK_1_1EventBuffer_a0f949874b91790b01292d2acc2feec84}
-assemble a json batch of events with the current data and return it. resets the buffer so it will acept events again. 
+
+
+removes the stored events and returns them as a json batch. 
+
+assemble a json batch of events with the current data and returns it. It resets the buffer so it will acept events again.  
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

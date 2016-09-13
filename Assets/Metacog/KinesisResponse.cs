@@ -5,7 +5,6 @@ using Amazon.Kinesis;
 namespace MetacogSDK
 {
 	/**
-	 * used to deserialize response from api/access/kinesis endpoint
 	 *expected:
 	 {
 	 "apiVersion":"2013-12-02",
@@ -18,6 +17,9 @@ namespace MetacogSDK
 	 "time":1472500898171
 	 }
 	 */ 
+	/// <summary>
+	/// used to deserialize response from api/access/kinesis endpoint
+	/// </summary>
 	[Serializable]
 	public class KinesisResponse
 	{
@@ -33,11 +35,16 @@ namespace MetacogSDK
 		{
 		}
 
+		/// <summary>
+		/// Creates an AWS.AmazonKinesisClient object 
+		/// </summary>
+		/// <description>
+		/// Uses the deserialized JSON information to build it.
+		/// </description>
+		/// <returns>The amazon kinesis client.</returns>
 		public AmazonKinesisClient toAmazonKinesisClient(){
 			AmazonKinesisConfig clientConfig = new AmazonKinesisConfig ();
 			clientConfig.RegionEndpoint = Amazon.RegionEndpoint.GetBySystemName(region);
-			//clientConfig.RegionEndpointServiceName = kinesisStreamName;
-
 			return new AmazonKinesisClient (
 				accessKeyId,
 				secretAccessKey,

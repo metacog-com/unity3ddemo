@@ -97,11 +97,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">MetacogSDK.KinesisResponse Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>used to deserialize response from api/access/kinesis endpoint  
+ <a href="classMetacogSDK_1_1KinesisResponse.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7ad03fb69b82c2e149b433ce44c12120"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ad03fb69b82c2e149b433ce44c12120"></a>
-AmazonKinesisClient&#160;</td><td class="memItemRight" valign="bottom"><b>toAmazonKinesisClient</b> ()</td></tr>
+<tr class="memitem:a7ad03fb69b82c2e149b433ce44c12120"><td class="memItemLeft" align="right" valign="top">AmazonKinesisClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetacogSDK_1_1KinesisResponse.html#a7ad03fb69b82c2e149b433ce44c12120">toAmazonKinesisClient</a> ()</td></tr>
+<tr class="memdesc:a7ad03fb69b82c2e149b433ce44c12120"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an AWS.AmazonKinesisClient object  <a href="#a7ad03fb69b82c2e149b433ce44c12120">More...</a><br /></td></tr>
 <tr class="separator:a7ad03fb69b82c2e149b433ce44c12120"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -129,8 +132,36 @@ long&#160;</td><td class="memItemRight" valign="bottom"><b>time</b></td></tr>
 <tr class="separator:a616c1e17ebf15225aaa26cd9d8c1f0d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>used to deserialize response from api/access/kinesis endpoint expected: { "apiVersion":"2013-12-02", "accessKeyId":"ASIAJKRDBPZH7DFQ336A", "secretAccessKey":"YQLuFj4wyDb33vVHoEaohPeDgj7YlJa97MT9VHwT", "sessionToken":"FQoDYXdzEB0aDMr0sCruslTHzlY41iKsAToru7AyJybnVjwoqz/wuxPryPEW8eRmZ23q2wPcRURhCuyOZ8bLckoezEqEOUTp3DyU+0tZSr3RqUsBGB0eqdDuh4uTcVuTqICo6uCOGTWCeaAJ1hLbN+RZPYRHmfuPTx3WC34a1EP7K+y1ek0dMmJ8IB73R4vcmXIjNjTnYrAbEJ/C1P/noue7pOvvl0vdcbrWJyN3WyaxUe0ZD1Qf7diXMOH+YyorT4PT7h4ooqmSvgU=", "region":"us-east-1", "kinesisStreamName":"prodmetacog_raw", "httpOptions":{"agent":false}, "time":1472500898171 } </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p>used to deserialize response from api/access/kinesis endpoint </p>
+<p>expected: { "apiVersion":"2013-12-02", "accessKeyId":"ASIAJKRDBPZH7DFQ336A", "secretAccessKey":"YQLuFj4wyDb33vVHoEaohPeDgj7YlJa97MT9VHwT", "sessionToken":"FQoDYXdzEB0aDMr0sCruslTHzlY41iKsAToru7AyJybnVjwoqz/wuxPryPEW8eRmZ23q2wPcRURhCuyOZ8bLckoezEqEOUTp3DyU+0tZSr3RqUsBGB0eqdDuh4uTcVuTqICo6uCOGTWCeaAJ1hLbN+RZPYRHmfuPTx3WC34a1EP7K+y1ek0dMmJ8IB73R4vcmXIjNjTnYrAbEJ/C1P/noue7pOvvl0vdcbrWJyN3WyaxUe0ZD1Qf7diXMOH+YyorT4PT7h4ooqmSvgU=", "region":"us-east-1", "kinesisStreamName":"prodmetacog_raw", "httpOptions":{"agent":false}, "time":1472500898171 } </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a7ad03fb69b82c2e149b433ce44c12120"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AmazonKinesisClient MetacogSDK.KinesisResponse.toAmazonKinesisClient </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates an AWS.AmazonKinesisClient object </p>
+<p>Uses the deserialized JSON information to build it.  </p><dl class="section return"><dt>Returns</dt><dd>The amazon kinesis client.</dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/cesar/Projects/development/unity3ddemo/Assets/Metacog/KinesisResponse.cs</li>
 </ul>
 </div><!-- contents -->

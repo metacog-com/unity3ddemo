@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['eventbuffer',['EventBuffer',['../classMetacogSDK_1_1EventBuffer.html',1,'MetacogSDK']]],
-  ['eventstorage',['EventStorage',['../classMetacogSDK_1_1EventStorage.html',1,'MetacogSDK']]],
-  ['eventtype',['EventType',['../namespaceMetacogSDK.html#a9a46be6b2e98a6ae7460c93faf69728e',1,'MetacogSDK']]]
+  ['flush',['flush',['../classMetacogSDK_1_1EventBuffer.html#a0f949874b91790b01292d2acc2feec84',1,'MetacogSDK::EventBuffer']]]
 ];

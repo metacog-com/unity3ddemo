@@ -122,21 +122,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abc4258a6c3a76a3b077d9388ea25b058"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetacogSDK_1_1Metacog.html#abc4258a6c3a76a3b077d9388ea25b058">Start</a> ()</td></tr>
 <tr class="memdesc:abc4258a6c3a76a3b077d9388ea25b058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins the communication with the metacog platform.  <a href="#abc4258a6c3a76a3b077d9388ea25b058">More...</a><br /></td></tr>
 <tr class="separator:abc4258a6c3a76a3b077d9388ea25b058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e454d49db2e9dca3a52b04ef7d2167a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e454d49db2e9dca3a52b04ef7d2167a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> ()</td></tr>
-<tr class="separator:a8e454d49db2e9dca3a52b04ef7d2167a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a6283ef2b5e6f75c90700f5021542aea3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetacogSDK_1_1Metacog.html#a6283ef2b5e6f75c90700f5021542aea3">Send</a> (string eventName, object data, <a class="el" href="namespaceMetacogSDK.html#a9a46be6b2e98a6ae7460c93faf69728e">EventType</a> eventType)</td></tr>
 <tr class="memdesc:a6283ef2b5e6f75c90700f5021542aea3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append an event to the queue and eventually, send it to the <a class="el" href="classMetacogSDK_1_1Metacog.html" title="MonoBehavior that should be added to the Unity3D project. ">Metacog</a> platform.  <a href="#a6283ef2b5e6f75c90700f5021542aea3">More...</a><br /></td></tr>
 <tr class="separator:a6283ef2b5e6f75c90700f5021542aea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a348e517c0a66e22ed234e08564f5f988"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetacogSDK_1_1Metacog.html#a348e517c0a66e22ed234e08564f5f988">ConvertToUnixTime</a> (DateTime datetime)</td></tr>
-<tr class="memdesc:a348e517c0a66e22ed234e08564f5f988"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a date time object to Unix time representation.  <a href="#a348e517c0a66e22ed234e08564f5f988">More...</a><br /></td></tr>
-<tr class="separator:a348e517c0a66e22ed234e08564f5f988"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa568382863f982afacb50869ffd6f1ac"><td class="memItemLeft" align="right" valign="top">static DateTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetacogSDK_1_1Metacog.html#aa568382863f982afacb50869ffd6f1ac">UnixTimeToDateTime</a> (long unixtime)</td></tr>
-<tr class="memdesc:aa568382863f982afacb50869ffd6f1ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert Unix time value to a DateTime object.  <a href="#aa568382863f982afacb50869ffd6f1ac">More...</a><br /></td></tr>
-<tr class="separator:aa568382863f982afacb50869ffd6f1ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -175,40 +166,6 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>sessionJson</b><cod
 <div class="textblock"><p>MonoBehavior that should be added to the Unity3D project. </p>
 <p>expose to Unity's editor the <a class="el" href="classMetacogSDK_1_1Metacog.html" title="MonoBehavior that should be added to the Unity3D project. ">Metacog</a> authentication credentials and also triggers the logger mechanism.  </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a348e517c0a66e22ed234e08564f5f988"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static long MetacogSDK.Metacog.ConvertToUnixTime </td>
-          <td>(</td>
-          <td class="paramtype">DateTime&#160;</td>
-          <td class="paramname"><em>datetime</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Convert a date time object to Unix time representation. </p>
-<p>source: <a href="http://www.fluxbytes.com/csharp/convert-datetime-to-unix-time-in-c/">http://www.fluxbytes.com/csharp/convert-datetime-to-unix-time-in-c/</a></p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">datetime</td><td>The datetime object to convert to Unix time stamp.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns a numerical representation (Unix time) of the DateTime object.</dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="a6283ef2b5e6f75c90700f5021542aea3"></a>
 <div class="memitem">
 <div class="memproto">
@@ -281,41 +238,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>sessionJson</b><cod
 </div><div class="memdoc">
 
 <p>Begins the communication with the metacog platform. </p>
-<p>Specific implementation will change according to the target platform: for WebGL, authentication and logging will be delegated to the external javascript <a class="el" href="classMetacogSDK_1_1Metacog.html" title="MonoBehavior that should be added to the Unity3D project. ">Metacog</a> Client's Library. for all the other platforms, the functionality will be executed internally, using the Amazon AWS C# library.  summary&gt; Initialized </p>
-
-</div>
-</div>
-<a class="anchor" id="aa568382863f982afacb50869ffd6f1ac"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static DateTime MetacogSDK.Metacog.UnixTimeToDateTime </td>
-          <td>(</td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>unixtime</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Convert Unix time value to a DateTime object. </p>
-<p>source: <a href="http://www.fluxbytes.com/csharp/convert-datetime-to-unix-time-in-c/">http://www.fluxbytes.com/csharp/convert-datetime-to-unix-time-in-c/</a></p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">unixtime</td><td>The Unix time stamp you want to convert to DateTime.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns a DateTime object that represents value of the Unix time.</dd></dl>
+<p>Specific implementation will change according to the target platform: for WebGL, authentication and logging will be delegated to the external javascript <a class="el" href="classMetacogSDK_1_1Metacog.html" title="MonoBehavior that should be added to the Unity3D project. ">Metacog</a> Client's Library. for all the other platforms, the functionality will be executed internally, using the Amazon AWS C# library.  summary&gt; Request credentials and initializes the AWS SDK. Initializes the logging mechanism. </p>
 
 </div>
 </div>

@@ -1,19 +1,57 @@
 \hypertarget{classMetacogSDK_1_1EventStorage}{}\section{Metacog\+S\+D\+K.\+Event\+Storage Class Reference}
 \label{classMetacogSDK_1_1EventStorage}\index{Metacog\+S\+D\+K.\+Event\+Storage@{Metacog\+S\+D\+K.\+Event\+Storage}}
+
+
+Keeps an in-\/memory buffer of event batches.  
+
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool {\bfseries Is\+Empty} ()\hypertarget{classMetacogSDK_1_1EventStorage_a8443cd6b97e64df655860fccfa7a17f1}{}\label{classMetacogSDK_1_1EventStorage_a8443cd6b97e64df655860fccfa7a17f1}
-
-\item 
-void {\bfseries Add} (string json\+\_\+batch)\hypertarget{classMetacogSDK_1_1EventStorage_a748d213bc1101abcd387fa60fef04d5f}{}\label{classMetacogSDK_1_1EventStorage_a748d213bc1101abcd387fa60fef04d5f}
-
-\item 
+bool \hyperlink{classMetacogSDK_1_1EventStorage_a8443cd6b97e64df655860fccfa7a17f1}{Is\+Empty} ()
+\begin{DoxyCompactList}\small\item\em Determines whether this instance is empty. \end{DoxyCompactList}\item 
+void \hyperlink{classMetacogSDK_1_1EventStorage_a748d213bc1101abcd387fa60fef04d5f}{Add} (string json\+\_\+batch)
+\begin{DoxyCompactList}\small\item\em Add the specified json\+\_\+batch. \end{DoxyCompactList}\item 
 string \hyperlink{classMetacogSDK_1_1EventStorage_ad54c17596088fffb5f47f644fae2388e}{Pop} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em removes the oldest events batch in the queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Keeps an in-\/memory buffer of event batches. 
+
 
 
 \subsection{Member Function Documentation}
+\index{Metacog\+S\+D\+K\+::\+Event\+Storage@{Metacog\+S\+D\+K\+::\+Event\+Storage}!Add@{Add}}
+\index{Add@{Add}!Metacog\+S\+D\+K\+::\+Event\+Storage@{Metacog\+S\+D\+K\+::\+Event\+Storage}}
+\subsubsection[{\texorpdfstring{Add(string json\+\_\+batch)}{Add(string json_batch)}}]{\setlength{\rightskip}{0pt plus 5cm}void Metacog\+S\+D\+K.\+Event\+Storage.\+Add (
+\begin{DoxyParamCaption}
+\item[{string}]{json\+\_\+batch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMetacogSDK_1_1EventStorage_a748d213bc1101abcd387fa60fef04d5f}{}\label{classMetacogSDK_1_1EventStorage_a748d213bc1101abcd387fa60fef04d5f}
+
+
+Add the specified json\+\_\+batch. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json\+\_\+batch} & Json batch.\\
+\hline
+\end{DoxyParams}
+\index{Metacog\+S\+D\+K\+::\+Event\+Storage@{Metacog\+S\+D\+K\+::\+Event\+Storage}!Is\+Empty@{Is\+Empty}}
+\index{Is\+Empty@{Is\+Empty}!Metacog\+S\+D\+K\+::\+Event\+Storage@{Metacog\+S\+D\+K\+::\+Event\+Storage}}
+\subsubsection[{\texorpdfstring{Is\+Empty()}{IsEmpty()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Metacog\+S\+D\+K.\+Event\+Storage.\+Is\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMetacogSDK_1_1EventStorage_a8443cd6b97e64df655860fccfa7a17f1}{}\label{classMetacogSDK_1_1EventStorage_a8443cd6b97e64df655860fccfa7a17f1}
+
+
+Determines whether this instance is empty. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if this instance is empty; otherwise, {\ttfamily false}.
+\end{DoxyReturn}
 \index{Metacog\+S\+D\+K\+::\+Event\+Storage@{Metacog\+S\+D\+K\+::\+Event\+Storage}!Pop@{Pop}}
 \index{Pop@{Pop}!Metacog\+S\+D\+K\+::\+Event\+Storage@{Metacog\+S\+D\+K\+::\+Event\+Storage}}
 \subsubsection[{\texorpdfstring{Pop()}{Pop()}}]{\setlength{\rightskip}{0pt plus 5cm}string Metacog\+S\+D\+K.\+Event\+Storage.\+Pop (
@@ -21,7 +59,14 @@ string \hyperlink{classMetacogSDK_1_1EventStorage_ad54c17596088fffb5f47f644fae23
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMetacogSDK_1_1EventStorage_ad54c17596088fffb5f47f644fae2388e}{}\label{classMetacogSDK_1_1EventStorage_ad54c17596088fffb5f47f644fae2388e}
-retrieve the oldest added batch. null if container is empty. 
+
+
+removes the oldest events batch in the queue. 
+
+\begin{DoxyReturn}{Returns}
+batch as json string, null if the storage is empty.
+\end{DoxyReturn}
+
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

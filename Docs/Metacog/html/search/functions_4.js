@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['unixtimetodatetime',['UnixTimeToDateTime',['../classMetacogSDK_1_1Metacog.html#aa568382863f982afacb50869ffd6f1ac',1,'MetacogSDK::Metacog']]]
+  ['logger',['Logger',['../classMetacogSDK_1_1Logger.html#a3e137315344b8a7469d863bfd3495c2c',1,'MetacogSDK::Logger']]]
 ];

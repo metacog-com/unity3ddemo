@@ -1,23 +1,101 @@
 \hypertarget{classMetacogSDK_1_1Logger}{}\section{Metacog\+S\+D\+K.\+Logger Class Reference}
 \label{classMetacogSDK_1_1Logger}\index{Metacog\+S\+D\+K.\+Logger@{Metacog\+S\+D\+K.\+Logger}}
+
+
+Continous pushing of events to the \hyperlink{classMetacogSDK_1_1Metacog}{Metacog} platform.  
+
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\bfseries Logger} (\hyperlink{classMetacogSDK_1_1Metacog}{Metacog} mc)\hypertarget{classMetacogSDK_1_1Logger_a3e137315344b8a7469d863bfd3495c2c}{}\label{classMetacogSDK_1_1Logger_a3e137315344b8a7469d863bfd3495c2c}
-
-\item 
-void {\bfseries Send} (string event\+Name, object data, \hyperlink{namespaceMetacogSDK_a9a46be6b2e98a6ae7460c93faf69728e}{Event\+Type} event\+Type)\hypertarget{classMetacogSDK_1_1Logger_aa3b730166a419e25aa9a5c22a0d68690}{}\label{classMetacogSDK_1_1Logger_aa3b730166a419e25aa9a5c22a0d68690}
-
-\item 
-void {\bfseries Start} ()\hypertarget{classMetacogSDK_1_1Logger_a5394b2435a693ba6b7b7745bb6d93129}{}\label{classMetacogSDK_1_1Logger_a5394b2435a693ba6b7b7745bb6d93129}
-
-\item 
+\hyperlink{classMetacogSDK_1_1Logger_a3e137315344b8a7469d863bfd3495c2c}{Logger} (\hyperlink{classMetacogSDK_1_1Metacog}{Metacog} mc)
+\begin{DoxyCompactList}\small\item\em Constructor. initializes event buffer and production endpoint. \end{DoxyCompactList}\item 
+void \hyperlink{classMetacogSDK_1_1Logger_aa3b730166a419e25aa9a5c22a0d68690}{Send} (string event\+Name, object data, \hyperlink{namespaceMetacogSDK_a9a46be6b2e98a6ae7460c93faf69728e}{Event\+Type} event\+Type)
+\begin{DoxyCompactList}\small\item\em Store event for later sending to \hyperlink{classMetacogSDK_1_1Metacog}{Metacog}. \end{DoxyCompactList}\item 
+void \hyperlink{classMetacogSDK_1_1Logger_a5394b2435a693ba6b7b7745bb6d93129}{Start} ()
+\begin{DoxyCompactList}\small\item\em reset timers and set running status. \end{DoxyCompactList}\item 
 void {\bfseries Stop} ()\hypertarget{classMetacogSDK_1_1Logger_a4539588c58009fd4343a83757cf5b84f}{}\label{classMetacogSDK_1_1Logger_a4539588c58009fd4343a83757cf5b84f}
 
 \item 
-void {\bfseries update} (float dt)\hypertarget{classMetacogSDK_1_1Logger_a42cbf5df7e9d83ee96010c63eb62d66a}{}\label{classMetacogSDK_1_1Logger_a42cbf5df7e9d83ee96010c63eb62d66a}
+void \hyperlink{classMetacogSDK_1_1Logger_a42cbf5df7e9d83ee96010c63eb62d66a}{update} (float dt)
+\begin{DoxyCompactList}\small\item\em update timer and process the queue of events. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
-\end{DoxyCompactItemize}
+
+\subsection{Detailed Description}
+Continous pushing of events to the \hyperlink{classMetacogSDK_1_1Metacog}{Metacog} platform. 
+
+This class receive events and store them into batches, that are sent periodically to the \hyperlink{classMetacogSDK_1_1Metacog}{Metacog} platform.  
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Metacog\+S\+D\+K\+::\+Logger@{Metacog\+S\+D\+K\+::\+Logger}!Logger@{Logger}}
+\index{Logger@{Logger}!Metacog\+S\+D\+K\+::\+Logger@{Metacog\+S\+D\+K\+::\+Logger}}
+\subsubsection[{\texorpdfstring{Logger(\+Metacog mc)}{Logger(Metacog mc)}}]{\setlength{\rightskip}{0pt plus 5cm}Metacog\+S\+D\+K.\+Logger.\+Logger (
+\begin{DoxyParamCaption}
+\item[{{\bf Metacog}}]{mc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMetacogSDK_1_1Logger_a3e137315344b8a7469d863bfd3495c2c}{}\label{classMetacogSDK_1_1Logger_a3e137315344b8a7469d863bfd3495c2c}
+
+
+Constructor. initializes event buffer and production endpoint. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mc} & \hyperlink{classMetacogSDK_1_1Metacog}{Metacog} instance.\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Metacog\+S\+D\+K\+::\+Logger@{Metacog\+S\+D\+K\+::\+Logger}!Send@{Send}}
+\index{Send@{Send}!Metacog\+S\+D\+K\+::\+Logger@{Metacog\+S\+D\+K\+::\+Logger}}
+\subsubsection[{\texorpdfstring{Send(string event\+Name, object data, Event\+Type event\+Type)}{Send(string eventName, object data, EventType eventType)}}]{\setlength{\rightskip}{0pt plus 5cm}void Metacog\+S\+D\+K.\+Logger.\+Send (
+\begin{DoxyParamCaption}
+\item[{string}]{event\+Name, }
+\item[{object}]{data, }
+\item[{{\bf Event\+Type}}]{event\+Type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMetacogSDK_1_1Logger_aa3b730166a419e25aa9a5c22a0d68690}{}\label{classMetacogSDK_1_1Logger_aa3b730166a419e25aa9a5c22a0d68690}
+
+
+Store event for later sending to \hyperlink{classMetacogSDK_1_1Metacog}{Metacog}. 
+
+A timestamp and a incremental index are added at queue-\/insertion time.~\newline
+ The event is serialized into a json string, then pushed into the event\+Buffer (memory). if the buffer is full, it will flush into the event\+Storage. 
+\begin{DoxyParams}{Parameters}
+{\em event\+Name} & Event name.\\
+\hline
+{\em data} & Serializable object\\
+\hline
+{\em event\+Type} & Event type.\\
+\hline
+\end{DoxyParams}
+\index{Metacog\+S\+D\+K\+::\+Logger@{Metacog\+S\+D\+K\+::\+Logger}!Start@{Start}}
+\index{Start@{Start}!Metacog\+S\+D\+K\+::\+Logger@{Metacog\+S\+D\+K\+::\+Logger}}
+\subsubsection[{\texorpdfstring{Start()}{Start()}}]{\setlength{\rightskip}{0pt plus 5cm}void Metacog\+S\+D\+K.\+Logger.\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMetacogSDK_1_1Logger_a5394b2435a693ba6b7b7745bb6d93129}{}\label{classMetacogSDK_1_1Logger_a5394b2435a693ba6b7b7745bb6d93129}
+
+
+reset timers and set running status. 
+
+\index{Metacog\+S\+D\+K\+::\+Logger@{Metacog\+S\+D\+K\+::\+Logger}!update@{update}}
+\index{update@{update}!Metacog\+S\+D\+K\+::\+Logger@{Metacog\+S\+D\+K\+::\+Logger}}
+\subsubsection[{\texorpdfstring{update(float dt)}{update(float dt)}}]{\setlength{\rightskip}{0pt plus 5cm}void Metacog\+S\+D\+K.\+Logger.\+update (
+\begin{DoxyParamCaption}
+\item[{float}]{dt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMetacogSDK_1_1Logger_a42cbf5df7e9d83ee96010c63eb62d66a}{}\label{classMetacogSDK_1_1Logger_a42cbf5df7e9d83ee96010c63eb62d66a}
+
+
+update timer and process the queue of events. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time in seconds\\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

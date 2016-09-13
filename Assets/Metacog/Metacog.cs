@@ -123,7 +123,7 @@ namespace MetacogSDK {
 		#else
 
 		///<summary>
-		///Initialized 
+		///Request credentials and initializes the AWS SDK. Initializes the logging mechanism.
 		/// </summary>
 		private void StartAWS(){
 			UnityInitializer.AttachToGameObject(this.gameObject);
@@ -145,27 +145,30 @@ namespace MetacogSDK {
 		}
 		#endif
 
-		/*
-		 * returns the following stringifyed json:
-		    {
-		    publisher_id: null,
-		    application_id: null,
-    		widget_id: null,
-    		learner_id: null,
-    		learner_token: null,
-    		session_id: null,
-    		auth_token: null
-			}
-		 */
+		/// <summary>
+		/// build a string with the JSON representation of the authentication information. 
+		/// </summary>
+		/// <description>
+		/// returns the following stringifyed json:
+		/// <code>
+		///{
+		///	publisher_id: null,
+		///	application_id: null,
+		///	widget_id: null,
+		///	learner_id: null,
+		///	learner_token: null,
+		///	session_id: null,
+		///	auth_token: null
+		///}
+		///</code>
+		/// </description>
+		/// <returns>The session json as string</returns>
 		private string buildSessionJson(){
-
-
 			StringBuilder buffer = new StringBuilder (); 
 			buffer.Append ("{");
 			buffer.Append ("\"publisher_id\":"); buffer.Append (addAttr(PublisherID));
 			buffer.Append (",\"widget_id\":"); buffer.Append (addAttr(WidgetID));
 			buffer.Append (",\"learner_id\":"); buffer.Append (addAttr(LearnerID));
-
 
 			buffer.Append (",\"application_id\":"); buffer.Append (addAttr(ApplicationID));
 
@@ -187,7 +190,6 @@ namespace MetacogSDK {
 		}
 
 
-		/// source: http://www.fluxbytes.com/csharp/convert-datetime-to-unix-time-in-c/
 		/// <summary>
 		/// Convert a date time object to Unix time representation.
 		/// </summary>
@@ -195,11 +197,11 @@ namespace MetacogSDK {
 		/// <returns>Returns a numerical representation (Unix time) of the DateTime object.</returns>
 		public static long ConvertToUnixTime(DateTime datetime)
 		{
+			// source: http://www.fluxbytes.com/csharp/convert-datetime-to-unix-time-in-c/
 			DateTime sTime = new DateTime(1970, 1, 1,0,0,0,DateTimeKind.Utc);
 			return (long)((datetime - sTime).TotalSeconds * 1000.0f);
 		}
 
-		/// source: http://www.fluxbytes.com/csharp/convert-datetime-to-unix-time-in-c/
 		/// <summary>
 		/// Convert Unix time value to a DateTime object.
 		/// </summary>
@@ -207,14 +209,15 @@ namespace MetacogSDK {
 		/// <returns>Returns a DateTime object that represents value of the Unix time.</returns>
 		public static DateTime UnixTimeToDateTime(long unixtime)
 		{
+			// source: http://www.fluxbytes.com/csharp/convert-datetime-to-unix-time-in-c/
 			DateTime sTime = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
 			return sTime.AddSeconds(unixtime);
 		}
 
 
-		/**
-		 * 
-		 */
+		/// <summary>
+		/// Update the logging mechanism (for native platforms).
+		/// </summary>
 		public void Update(){
 			#if !UNITY_WEBGL
 			logger.update (Time.deltaTime);

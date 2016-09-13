@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pop',['Pop',['../classMetacogSDK_1_1EventStorage.html#ad54c17596088fffb5f47f644fae2388e',1,'MetacogSDK::EventStorage']]]
+  ['flush',['flush',['../classMetacogSDK_1_1EventBuffer.html#a0f949874b91790b01292d2acc2feec84',1,'MetacogSDK::EventBuffer']]]
 ];

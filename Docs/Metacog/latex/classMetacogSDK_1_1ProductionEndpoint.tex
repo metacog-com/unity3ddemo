@@ -1,20 +1,82 @@
 \hypertarget{classMetacogSDK_1_1ProductionEndpoint}{}\section{Metacog\+S\+D\+K.\+Production\+Endpoint Class Reference}
 \label{classMetacogSDK_1_1ProductionEndpoint}\index{Metacog\+S\+D\+K.\+Production\+Endpoint@{Metacog\+S\+D\+K.\+Production\+Endpoint}}
+
+
+Send batches of events to \hyperlink{classMetacogSDK_1_1Metacog}{Metacog}\textquotesingle{}s backend.  
+
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 {\bfseries Production\+Endpoint} (\hyperlink{classMetacogSDK_1_1Metacog}{Metacog} mc)\hypertarget{classMetacogSDK_1_1ProductionEndpoint_a4f2c7ba7c615ee5f4985662f93aef13d}{}\label{classMetacogSDK_1_1ProductionEndpoint_a4f2c7ba7c615ee5f4985662f93aef13d}
 
 \item 
-void {\bfseries init} ()\hypertarget{classMetacogSDK_1_1ProductionEndpoint_ab2876d8ae2c940c683a02b6828506cd8}{}\label{classMetacogSDK_1_1ProductionEndpoint_ab2876d8ae2c940c683a02b6828506cd8}
+void \hyperlink{classMetacogSDK_1_1ProductionEndpoint_ab2876d8ae2c940c683a02b6828506cd8}{init} ()
+\begin{DoxyCompactList}\small\item\em Initializes the connection to A\+WS Kinesis. \end{DoxyCompactList}\item 
+void \hyperlink{classMetacogSDK_1_1ProductionEndpoint_a42e917f279f0c16fde8f8976c78cdc40}{init\+Kinesis\+Response} (long res\+Code, string res\+Txt)
+\begin{DoxyCompactList}\small\item\em Used as delegate in init\+Kinesis call. \end{DoxyCompactList}\item 
+void \hyperlink{classMetacogSDK_1_1ProductionEndpoint_a26431797fe15fcba641d047440fef2f9}{Process\+Queue} (\hyperlink{classMetacogSDK_1_1EventBuffer}{Event\+Buffer} event\+Buffer, \hyperlink{classMetacogSDK_1_1EventStorage}{Event\+Storage} event\+Storage)
+\begin{DoxyCompactList}\small\item\em Implements a cycle of queue retrieval and network sending. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
-\item 
-void {\bfseries init\+Kinesis\+Response} (long res\+Code, string res\+Txt)\hypertarget{classMetacogSDK_1_1ProductionEndpoint_a42e917f279f0c16fde8f8976c78cdc40}{}\label{classMetacogSDK_1_1ProductionEndpoint_a42e917f279f0c16fde8f8976c78cdc40}
 
-\item 
-void {\bfseries Process\+Queue} (\hyperlink{classMetacogSDK_1_1EventBuffer}{Event\+Buffer} event\+Buffer, \hyperlink{classMetacogSDK_1_1EventStorage}{Event\+Storage} event\+Storage)\hypertarget{classMetacogSDK_1_1ProductionEndpoint_a26431797fe15fcba641d047440fef2f9}{}\label{classMetacogSDK_1_1ProductionEndpoint_a26431797fe15fcba641d047440fef2f9}
+\subsection{Detailed Description}
+Send batches of events to \hyperlink{classMetacogSDK_1_1Metacog}{Metacog}\textquotesingle{}s backend. 
 
-\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Metacog\+S\+D\+K\+::\+Production\+Endpoint@{Metacog\+S\+D\+K\+::\+Production\+Endpoint}!init@{init}}
+\index{init@{init}!Metacog\+S\+D\+K\+::\+Production\+Endpoint@{Metacog\+S\+D\+K\+::\+Production\+Endpoint}}
+\subsubsection[{\texorpdfstring{init()}{init()}}]{\setlength{\rightskip}{0pt plus 5cm}void Metacog\+S\+D\+K.\+Production\+Endpoint.\+init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMetacogSDK_1_1ProductionEndpoint_ab2876d8ae2c940c683a02b6828506cd8}{}\label{classMetacogSDK_1_1ProductionEndpoint_ab2876d8ae2c940c683a02b6828506cd8}
+
+
+Initializes the connection to A\+WS Kinesis. 
+
+\index{Metacog\+S\+D\+K\+::\+Production\+Endpoint@{Metacog\+S\+D\+K\+::\+Production\+Endpoint}!init\+Kinesis\+Response@{init\+Kinesis\+Response}}
+\index{init\+Kinesis\+Response@{init\+Kinesis\+Response}!Metacog\+S\+D\+K\+::\+Production\+Endpoint@{Metacog\+S\+D\+K\+::\+Production\+Endpoint}}
+\subsubsection[{\texorpdfstring{init\+Kinesis\+Response(long res\+Code, string res\+Txt)}{initKinesisResponse(long resCode, string resTxt)}}]{\setlength{\rightskip}{0pt plus 5cm}void Metacog\+S\+D\+K.\+Production\+Endpoint.\+init\+Kinesis\+Response (
+\begin{DoxyParamCaption}
+\item[{long}]{res\+Code, }
+\item[{string}]{res\+Txt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMetacogSDK_1_1ProductionEndpoint_a42e917f279f0c16fde8f8976c78cdc40}{}\label{classMetacogSDK_1_1ProductionEndpoint_a42e917f279f0c16fde8f8976c78cdc40}
+
+
+Used as delegate in init\+Kinesis call. 
+
+\begin{DoxyReturn}{Returns}
+The kinesis response.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em res\+Code} & Res code.\\
+\hline
+{\em res\+Txt} & Res text.\\
+\hline
+\end{DoxyParams}
+\index{Metacog\+S\+D\+K\+::\+Production\+Endpoint@{Metacog\+S\+D\+K\+::\+Production\+Endpoint}!Process\+Queue@{Process\+Queue}}
+\index{Process\+Queue@{Process\+Queue}!Metacog\+S\+D\+K\+::\+Production\+Endpoint@{Metacog\+S\+D\+K\+::\+Production\+Endpoint}}
+\subsubsection[{\texorpdfstring{Process\+Queue(\+Event\+Buffer event\+Buffer, Event\+Storage event\+Storage)}{ProcessQueue(EventBuffer eventBuffer, EventStorage eventStorage)}}]{\setlength{\rightskip}{0pt plus 5cm}void Metacog\+S\+D\+K.\+Production\+Endpoint.\+Process\+Queue (
+\begin{DoxyParamCaption}
+\item[{{\bf Event\+Buffer}}]{event\+Buffer, }
+\item[{{\bf Event\+Storage}}]{event\+Storage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMetacogSDK_1_1ProductionEndpoint_a26431797fe15fcba641d047440fef2f9}{}\label{classMetacogSDK_1_1ProductionEndpoint_a26431797fe15fcba641d047440fef2f9}
+
+
+Implements a cycle of queue retrieval and network sending. 
+
+pick up a batch from the storage and send to kinesis. if no batches available, try to flush the event\+Buffer for remaining events.  
+\begin{DoxyParams}{Parameters}
+{\em event\+Buffer} & In memory buffer. if the storage is empty, it will try to flush pending events there.\\
+\hline
+{\em event\+Storage} & Storage to retrieve events from, and reinsert failed events\\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

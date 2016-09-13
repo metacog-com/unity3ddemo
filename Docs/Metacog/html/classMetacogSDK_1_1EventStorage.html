@@ -96,19 +96,83 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">MetacogSDK.EventStorage Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Keeps an in-memory buffer of event batches.  
+ <a href="classMetacogSDK_1_1EventStorage.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8443cd6b97e64df655860fccfa7a17f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8443cd6b97e64df655860fccfa7a17f1"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsEmpty</b> ()</td></tr>
+<tr class="memitem:a8443cd6b97e64df655860fccfa7a17f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetacogSDK_1_1EventStorage.html#a8443cd6b97e64df655860fccfa7a17f1">IsEmpty</a> ()</td></tr>
+<tr class="memdesc:a8443cd6b97e64df655860fccfa7a17f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether this instance is empty.  <a href="#a8443cd6b97e64df655860fccfa7a17f1">More...</a><br /></td></tr>
 <tr class="separator:a8443cd6b97e64df655860fccfa7a17f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a748d213bc1101abcd387fa60fef04d5f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a748d213bc1101abcd387fa60fef04d5f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Add</b> (string json_batch)</td></tr>
+<tr class="memitem:a748d213bc1101abcd387fa60fef04d5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetacogSDK_1_1EventStorage.html#a748d213bc1101abcd387fa60fef04d5f">Add</a> (string json_batch)</td></tr>
+<tr class="memdesc:a748d213bc1101abcd387fa60fef04d5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the specified json_batch.  <a href="#a748d213bc1101abcd387fa60fef04d5f">More...</a><br /></td></tr>
 <tr class="separator:a748d213bc1101abcd387fa60fef04d5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad54c17596088fffb5f47f644fae2388e"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetacogSDK_1_1EventStorage.html#ad54c17596088fffb5f47f644fae2388e">Pop</a> ()</td></tr>
+<tr class="memdesc:ad54c17596088fffb5f47f644fae2388e"><td class="mdescLeft">&#160;</td><td class="mdescRight">removes the oldest events batch in the queue.  <a href="#ad54c17596088fffb5f47f644fae2388e">More...</a><br /></td></tr>
 <tr class="separator:ad54c17596088fffb5f47f644fae2388e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Keeps an in-memory buffer of event batches. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a748d213bc1101abcd387fa60fef04d5f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MetacogSDK.EventStorage.Add </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>json_batch</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add the specified json_batch. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">json_batch</td><td>Json batch.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a8443cd6b97e64df655860fccfa7a17f1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MetacogSDK.EventStorage.IsEmpty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determines whether this instance is empty. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if this instance is empty; otherwise, <code>false</code>.</dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ad54c17596088fffb5f47f644fae2388e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -129,7 +193,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Add</b> (string json_
   </tr>
 </table>
 </div><div class="memdoc">
-<p>retrieve the oldest added batch. null if container is empty. </p>
+
+<p>removes the oldest events batch in the queue. </p>
+<dl class="section return"><dt>Returns</dt><dd>batch as json string, null if the storage is empty.</dd></dl>
 
 </div>
 </div>

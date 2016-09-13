@@ -1,17 +1,66 @@
 \hypertarget{classMetacogSDK_1_1API}{}\section{Metacog\+S\+D\+K.\+A\+PI Class Reference}
 \label{classMetacogSDK_1_1API}\index{Metacog\+S\+D\+K.\+A\+PI@{Metacog\+S\+D\+K.\+A\+PI}}
+
+
+Wrapper for network calls to the \hyperlink{classMetacogSDK_1_1Metacog}{Metacog} R\+E\+S\+T\+Ful \hyperlink{classMetacogSDK_1_1API}{A\+PI}.  
+
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-delegate void {\bfseries api\+Response} (long res\+Code, string res\+Txt)\hypertarget{classMetacogSDK_1_1API_a32f228252de73a7e47dffd674c9c7184}{}\label{classMetacogSDK_1_1API_a32f228252de73a7e47dffd674c9c7184}
+delegate void \hyperlink{classMetacogSDK_1_1API_a32f228252de73a7e47dffd674c9c7184}{api\+Response} (long res\+Code, string res\+Txt)
+\begin{DoxyCompactList}\small\item\em handle the response for all R\+E\+S\+T\+Ful calls \end{DoxyCompactList}\item 
+\hyperlink{classMetacogSDK_1_1API_a4de3d5a351dc955c280febc2aed43c02}{A\+PI} (\hyperlink{classMetacogSDK_1_1Metacog}{Metacog} mc)\hypertarget{classMetacogSDK_1_1API_a4de3d5a351dc955c280febc2aed43c02}{}\label{classMetacogSDK_1_1API_a4de3d5a351dc955c280febc2aed43c02}
 
-\item 
-{\bfseries A\+PI} (\hyperlink{classMetacogSDK_1_1Metacog}{Metacog} mc)\hypertarget{classMetacogSDK_1_1API_a4de3d5a351dc955c280febc2aed43c02}{}\label{classMetacogSDK_1_1API_a4de3d5a351dc955c280febc2aed43c02}
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyParams}{Parameters}
+{\em mc} & Reference to the \hyperlink{classMetacogSDK_1_1Metacog}{Metacog} object\\
+\hline
+\end{DoxyParams}
+\end{DoxyCompactList}\item 
+void \hyperlink{classMetacogSDK_1_1API_a8ca2987250fe76524ec9e959676dc237}{init\+Kinesis} (\hyperlink{classMetacogSDK_1_1API_a32f228252de73a7e47dffd674c9c7184}{api\+Response} resp)
+\begin{DoxyCompactList}\small\item\em Obtains credentials for the digesting endpoint. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
-\item 
-void {\bfseries init\+Kinesis} (api\+Response resp)\hypertarget{classMetacogSDK_1_1API_a8ca2987250fe76524ec9e959676dc237}{}\label{classMetacogSDK_1_1API_a8ca2987250fe76524ec9e959676dc237}
 
-\end{DoxyCompactItemize}
+\subsection{Detailed Description}
+Wrapper for network calls to the \hyperlink{classMetacogSDK_1_1Metacog}{Metacog} R\+E\+S\+T\+Ful \hyperlink{classMetacogSDK_1_1API}{A\+PI}. 
+
+All the services of the \hyperlink{classMetacogSDK_1_1Metacog}{Metacog} Platform are available through its R\+E\+S\+Tful \hyperlink{classMetacogSDK_1_1API}{A\+PI}.~\newline
+ Check the \hyperlink{classMetacogSDK_1_1API}{A\+PI} documentation at \href{https://developer.metacog.com/sandbox}{\tt https\+://developer.\+metacog.\+com/sandbox}  
+
+\subsection{Member Function Documentation}
+\index{Metacog\+S\+D\+K\+::\+A\+PI@{Metacog\+S\+D\+K\+::\+A\+PI}!api\+Response@{api\+Response}}
+\index{api\+Response@{api\+Response}!Metacog\+S\+D\+K\+::\+A\+PI@{Metacog\+S\+D\+K\+::\+A\+PI}}
+\subsubsection[{\texorpdfstring{api\+Response(long res\+Code, string res\+Txt)}{apiResponse(long resCode, string resTxt)}}]{\setlength{\rightskip}{0pt plus 5cm}delegate void Metacog\+S\+D\+K.\+A\+P\+I.\+api\+Response (
+\begin{DoxyParamCaption}
+\item[{long}]{res\+Code, }
+\item[{string}]{res\+Txt}
+\end{DoxyParamCaption}
+)}\hypertarget{classMetacogSDK_1_1API_a32f228252de73a7e47dffd674c9c7184}{}\label{classMetacogSDK_1_1API_a32f228252de73a7e47dffd674c9c7184}
+
+
+handle the response for all R\+E\+S\+T\+Ful calls 
+
+\index{Metacog\+S\+D\+K\+::\+A\+PI@{Metacog\+S\+D\+K\+::\+A\+PI}!init\+Kinesis@{init\+Kinesis}}
+\index{init\+Kinesis@{init\+Kinesis}!Metacog\+S\+D\+K\+::\+A\+PI@{Metacog\+S\+D\+K\+::\+A\+PI}}
+\subsubsection[{\texorpdfstring{init\+Kinesis(api\+Response resp)}{initKinesis(apiResponse resp)}}]{\setlength{\rightskip}{0pt plus 5cm}void Metacog\+S\+D\+K.\+A\+P\+I.\+init\+Kinesis (
+\begin{DoxyParamCaption}
+\item[{{\bf api\+Response}}]{resp}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMetacogSDK_1_1API_a8ca2987250fe76524ec9e959676dc237}{}\label{classMetacogSDK_1_1API_a8ca2987250fe76524ec9e959676dc237}
+
+
+Obtains credentials for the digesting endpoint. 
+
+Logging to \hyperlink{classMetacogSDK_1_1Metacog}{Metacog} is done through the Kinesis A\+WS service.~\newline
+ Provisional credentials for this services should be obtained through the /access/ set of endpoints at \hyperlink{classMetacogSDK_1_1Metacog}{Metacog}\textquotesingle{}s \hyperlink{classMetacogSDK_1_1API}{A\+PI}. ~\newline
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em resp} & callback\\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

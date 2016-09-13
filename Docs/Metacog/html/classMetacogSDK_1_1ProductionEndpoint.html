@@ -96,22 +96,140 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">MetacogSDK.ProductionEndpoint Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Send batches of events to <a class="el" href="classMetacogSDK_1_1Metacog.html" title="MonoBehavior that should be added to the Unity3D project. ">Metacog</a>'s backend.  
+ <a href="classMetacogSDK_1_1ProductionEndpoint.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4f2c7ba7c615ee5f4985662f93aef13d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f2c7ba7c615ee5f4985662f93aef13d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>ProductionEndpoint</b> (<a class="el" href="classMetacogSDK_1_1Metacog.html">Metacog</a> mc)</td></tr>
 <tr class="separator:a4f2c7ba7c615ee5f4985662f93aef13d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2876d8ae2c940c683a02b6828506cd8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2876d8ae2c940c683a02b6828506cd8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> ()</td></tr>
+<tr class="memitem:ab2876d8ae2c940c683a02b6828506cd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetacogSDK_1_1ProductionEndpoint.html#ab2876d8ae2c940c683a02b6828506cd8">init</a> ()</td></tr>
+<tr class="memdesc:ab2876d8ae2c940c683a02b6828506cd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the connection to AWS Kinesis.  <a href="#ab2876d8ae2c940c683a02b6828506cd8">More...</a><br /></td></tr>
 <tr class="separator:ab2876d8ae2c940c683a02b6828506cd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42e917f279f0c16fde8f8976c78cdc40"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42e917f279f0c16fde8f8976c78cdc40"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>initKinesisResponse</b> (long resCode, string resTxt)</td></tr>
+<tr class="memitem:a42e917f279f0c16fde8f8976c78cdc40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetacogSDK_1_1ProductionEndpoint.html#a42e917f279f0c16fde8f8976c78cdc40">initKinesisResponse</a> (long resCode, string resTxt)</td></tr>
+<tr class="memdesc:a42e917f279f0c16fde8f8976c78cdc40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used as delegate in initKinesis call.  <a href="#a42e917f279f0c16fde8f8976c78cdc40">More...</a><br /></td></tr>
 <tr class="separator:a42e917f279f0c16fde8f8976c78cdc40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26431797fe15fcba641d047440fef2f9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26431797fe15fcba641d047440fef2f9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ProcessQueue</b> (<a class="el" href="classMetacogSDK_1_1EventBuffer.html">EventBuffer</a> eventBuffer, <a class="el" href="classMetacogSDK_1_1EventStorage.html">EventStorage</a> eventStorage)</td></tr>
+<tr class="memitem:a26431797fe15fcba641d047440fef2f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetacogSDK_1_1ProductionEndpoint.html#a26431797fe15fcba641d047440fef2f9">ProcessQueue</a> (<a class="el" href="classMetacogSDK_1_1EventBuffer.html">EventBuffer</a> eventBuffer, <a class="el" href="classMetacogSDK_1_1EventStorage.html">EventStorage</a> eventStorage)</td></tr>
+<tr class="memdesc:a26431797fe15fcba641d047440fef2f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a cycle of queue retrieval and network sending.  <a href="#a26431797fe15fcba641d047440fef2f9">More...</a><br /></td></tr>
 <tr class="separator:a26431797fe15fcba641d047440fef2f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Send batches of events to <a class="el" href="classMetacogSDK_1_1Metacog.html" title="MonoBehavior that should be added to the Unity3D project. ">Metacog</a>'s backend. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ab2876d8ae2c940c683a02b6828506cd8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MetacogSDK.ProductionEndpoint.init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes the connection to AWS Kinesis. </p>
+
+</div>
+</div>
+<a class="anchor" id="a42e917f279f0c16fde8f8976c78cdc40"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MetacogSDK.ProductionEndpoint.initKinesisResponse </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>resCode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>resTxt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Used as delegate in initKinesis call. </p>
+<dl class="section return"><dt>Returns</dt><dd>The kinesis response.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resCode</td><td>Res code.</td></tr>
+    <tr><td class="paramname">resTxt</td><td>Res text.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a26431797fe15fcba641d047440fef2f9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MetacogSDK.ProductionEndpoint.ProcessQueue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMetacogSDK_1_1EventBuffer.html">EventBuffer</a>&#160;</td>
+          <td class="paramname"><em>eventBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMetacogSDK_1_1EventStorage.html">EventStorage</a>&#160;</td>
+          <td class="paramname"><em>eventStorage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements a cycle of queue retrieval and network sending. </p>
+<p>pick up a batch from the storage and send to kinesis. if no batches available, try to flush the eventBuffer for remaining events.  </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eventBuffer</td><td>In memory buffer. if the storage is empty, it will try to flush pending events there.</td></tr>
+    <tr><td class="paramname">eventStorage</td><td>Storage to retrieve events from, and reinsert failed events</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/cesar/Projects/development/unity3ddemo/Assets/Metacog/ProductionEndpoint.cs</li>
 </ul>

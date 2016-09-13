@@ -8,20 +8,37 @@ using UnityEngine.Networking;
 namespace MetacogSDK
 {
 
+	/// <summary>
+	/// Wrapper for network calls to the Metacog RESTFul API.    
+	/// </summary>
+	/// <description>
+	/// All the services of the Metacog Platform are available through its RESTful API.<br>
+	/// Check the API documentation at <a href="https://developer.metacog.com/sandbox">https://developer.metacog.com/sandbox</a>
+	/// </description>
 	public class API
 	{
 
+		/// <summary>
+		/// handle the response for all RESTFul calls
+		/// </summary>
 		public delegate void apiResponse(long resCode, string resTxt);
 
 		private Metacog mc;
 
+		/// <param name="mc">Reference to the Metacog object</param>
 		public API(Metacog mc){
 			this.mc = mc; 
 		}
 
-		/**
-		 * 
-		 */ 
+		/// <summary>
+		/// Obtains credentials for the digesting endpoint.
+		/// </summary>
+		/// <summary>
+		/// Logging to Metacog is done through the Kinesis AWS service.<br>
+		/// Provisional credentials for this services should be obtained through 
+		/// the /access/ set of endpoints at Metacog's API. <br>
+		/// </summary>
+		/// <param name="resp">callback</param>
 		public void initKinesis(apiResponse resp){
 			string url = mc.apiEndpoint; 
 			//byte[] bytes = System.Text.Encoding.UTF8.GetBytes(postdata);
@@ -41,19 +58,12 @@ namespace MetacogSDK
 			executeRequest(request, resp);
 		}
 
-		/**
-		 * starts an async http request using unity objects.
-		 * it can only be done in the context of a GameObject, that is why
-		 * we pass the Metacog reference 
-		 */ 
 		private void executeRequest(UnityWebRequest request, apiResponse resp){
 			mc.StartCoroutine(WaitForRequest(request, resp));
 		}
 
 		private IEnumerator WaitForRequest(UnityWebRequest request, apiResponse resp){
 			yield return request.Send(); 
-			//Debug.Log ("error: " + request.error);
-			//Debug.Log ("responseCode: " + request.responseCode);
 			resp (request.responseCode, request.downloadHandler.text);
 		}
 	
