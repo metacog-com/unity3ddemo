@@ -2,6 +2,11 @@
 \label{classMetacogSDK_1_1Metacog}\index{Metacog\+S\+D\+K.\+Metacog@{Metacog\+S\+D\+K.\+Metacog}}
 
 
+Mono\+Behavior that should be added to the Unity3D project.  
+
+
+
+
 Inheritance diagram for Metacog\+S\+D\+K.\+Metacog\+:
 % FIG 0
 
@@ -11,17 +16,16 @@ Collaboration diagram for Metacog\+S\+D\+K.\+Metacog\+:
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void {\bfseries Start} ()\hypertarget{classMetacogSDK_1_1Metacog_abc4258a6c3a76a3b077d9388ea25b058}{}\label{classMetacogSDK_1_1Metacog_abc4258a6c3a76a3b077d9388ea25b058}
-
-\item 
+void \hyperlink{classMetacogSDK_1_1Metacog_abc4258a6c3a76a3b077d9388ea25b058}{Start} ()
+\begin{DoxyCompactList}\small\item\em Begins the communication with the metacog platform. \end{DoxyCompactList}\item 
 void {\bfseries Update} ()\hypertarget{classMetacogSDK_1_1Metacog_a8e454d49db2e9dca3a52b04ef7d2167a}{}\label{classMetacogSDK_1_1Metacog_a8e454d49db2e9dca3a52b04ef7d2167a}
 
 \end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static void \hyperlink{classMetacogSDK_1_1Metacog_a6283ef2b5e6f75c90700f5021542aea3}{Send} (string event\+Name, object data, Event\+Type event\+Type)
-\item 
+static void \hyperlink{classMetacogSDK_1_1Metacog_a6283ef2b5e6f75c90700f5021542aea3}{Send} (string event\+Name, object data, \hyperlink{namespaceMetacogSDK_a9a46be6b2e98a6ae7460c93faf69728e}{Event\+Type} event\+Type)
+\begin{DoxyCompactList}\small\item\em Append an event to the queue and eventually, send it to the \hyperlink{classMetacogSDK_1_1Metacog}{Metacog} platform. \end{DoxyCompactList}\item 
 static long \hyperlink{classMetacogSDK_1_1Metacog_a348e517c0a66e22ed234e08564f5f988}{Convert\+To\+Unix\+Time} (Date\+Time datetime)
 \begin{DoxyCompactList}\small\item\em Convert a date time object to Unix time representation. \end{DoxyCompactList}\item 
 static Date\+Time \hyperlink{classMetacogSDK_1_1Metacog_aa568382863f982afacb50869ffd6f1ac}{Unix\+Time\+To\+Date\+Time} (long unixtime)
@@ -61,6 +65,11 @@ string {\bfseries session\+Json}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}\h
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+Mono\+Behavior that should be added to the Unity3D project. 
+
+expose to Unity\textquotesingle{}s editor the \hyperlink{classMetacogSDK_1_1Metacog}{Metacog} authentication credentials and also triggers the logger mechanism.  
+
 \subsection{Member Function Documentation}
 \index{Metacog\+S\+D\+K\+::\+Metacog@{Metacog\+S\+D\+K\+::\+Metacog}!Convert\+To\+Unix\+Time@{Convert\+To\+Unix\+Time}}
 \index{Convert\+To\+Unix\+Time@{Convert\+To\+Unix\+Time}!Metacog\+S\+D\+K\+::\+Metacog@{Metacog\+S\+D\+K\+::\+Metacog}}
@@ -89,10 +98,34 @@ Returns a numerical representation (Unix time) of the Date\+Time object.
 \begin{DoxyParamCaption}
 \item[{string}]{event\+Name, }
 \item[{object}]{data, }
-\item[{Event\+Type}]{event\+Type}
+\item[{{\bf Event\+Type}}]{event\+Type}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classMetacogSDK_1_1Metacog_a6283ef2b5e6f75c90700f5021542aea3}{}\label{classMetacogSDK_1_1Metacog_a6283ef2b5e6f75c90700f5021542aea3}
-append a event to the queue and eventually, send it to the \hyperlink{classMetacogSDK_1_1Metacog}{Metacog} platform. the developer is responsible of implement custom classes for each one of his events. those classes should be annoated as serializable. \+: note that for playback, we will need to deserialize the data. in C\#, the target type should be known before hand. it means that we may need to provide some mechanism to register a mapping between event-\/names and C\# Classes.. \index{Metacog\+S\+D\+K\+::\+Metacog@{Metacog\+S\+D\+K\+::\+Metacog}!Unix\+Time\+To\+Date\+Time@{Unix\+Time\+To\+Date\+Time}}
+
+
+Append an event to the queue and eventually, send it to the \hyperlink{classMetacogSDK_1_1Metacog}{Metacog} platform. 
+
+The developer is responsible of implement custom classes for each one of his events. those classes should be annotated as serializable. \+: note that for playback, we will need to deserialize the data. in C\#, the target type should be known before hand. it means that we may need to provide some mechanism to register a mapping between event-\/names and C\# Classes..  
+\begin{DoxyParams}{Parameters}
+{\em event\+Name} & descriptive label to identify events. i.\+e. \char`\"{}\+Game\+Started\char`\"{}\\
+\hline
+{\em data} & Serializable object\\
+\hline
+{\em event\+Type} & Metacog.\+S\+D\+K.\+Event\+Type \\
+\hline
+\end{DoxyParams}
+\index{Metacog\+S\+D\+K\+::\+Metacog@{Metacog\+S\+D\+K\+::\+Metacog}!Start@{Start}}
+\index{Start@{Start}!Metacog\+S\+D\+K\+::\+Metacog@{Metacog\+S\+D\+K\+::\+Metacog}}
+\subsubsection[{\texorpdfstring{Start()}{Start()}}]{\setlength{\rightskip}{0pt plus 5cm}void Metacog\+S\+D\+K.\+Metacog.\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMetacogSDK_1_1Metacog_abc4258a6c3a76a3b077d9388ea25b058}{}\label{classMetacogSDK_1_1Metacog_abc4258a6c3a76a3b077d9388ea25b058}
+
+
+Begins the communication with the metacog platform. 
+
+Specific implementation will change according to the target platform\+: for Web\+GL, authentication and logging will be delegated to the external javascript \hyperlink{classMetacogSDK_1_1Metacog}{Metacog} Client\textquotesingle{}s Library. for all the other platforms, the functionality will be executed internally, using the Amazon A\+WS C\# library.  summary$>$ Initialized \index{Metacog\+S\+D\+K\+::\+Metacog@{Metacog\+S\+D\+K\+::\+Metacog}!Unix\+Time\+To\+Date\+Time@{Unix\+Time\+To\+Date\+Time}}
 \index{Unix\+Time\+To\+Date\+Time@{Unix\+Time\+To\+Date\+Time}!Metacog\+S\+D\+K\+::\+Metacog@{Metacog\+S\+D\+K\+::\+Metacog}}
 \subsubsection[{\texorpdfstring{Unix\+Time\+To\+Date\+Time(long unixtime)}{UnixTimeToDateTime(long unixtime)}}]{\setlength{\rightskip}{0pt plus 5cm}static Date\+Time Metacog\+S\+D\+K.\+Metacog.\+Unix\+Time\+To\+Date\+Time (
 \begin{DoxyParamCaption}

@@ -7,13 +7,42 @@ using UnityEngine.Networking;
 #endif
 using System.Text; 
 
+///\mainpage
+/// This is the documentation for the Unity3D version of the Metacog Client Library: it allows Unity3D developers to send events to the <a href="//www.metacog.com">Metacog</a> backend and access other services. <br>
+/// Please visit the <a href="http://www.metacog.com/developer/examples/unity3d_tutorial" href="_blank">tutorial</a> to learn how to integrate this library into your Unity3D project, 
+/// and check the live demo <a href="http://www.metacog.com/developer/examples/unity3d_demo" href="_blank">here</a>.
+/// You can learn more about Metacog, the Metacog API and the Client Library in the <a href="https://developer.metacog.com/">Metacog's developers portal. </a>
+
+
+/// <summary>
+/// The MetacogSDK namespace offer classes to make accessible the <a href="">Metacog platform</a> services from Unity3D.
+/// </summary>
+/// <description>
+/// DEPENDENCIES<br>
+/// For no webgl builds it requires the Amazon AWS library. Please download it 
+/// from xxx and add it to your project. <br>
+/// For Webgl it requires the Javascript Metacog Client Library in the container html page. 
+/// please see the tutorial for details.   
+/// </description>
 namespace MetacogSDK {
 
+	/// <summary>
+	/// Metacog event required type.
+	/// use MODEL for events that represent internal changes, like change on score,
+	/// and UI for events triggered by the user, like clicking the help button.
+	/// </summary>
 	public enum EventType{
 		MODEL,
 		UI
 	}
 
+	/// <summary>
+	/// MonoBehavior that should be added to the Unity3D project.
+	/// </summary>
+	/// <description>
+	/// expose to Unity's editor the Metacog authentication credentials and
+	/// also triggers the logger mechanism.
+	/// </description>
 	public class Metacog: MonoBehaviour  {
 
 		public string PublisherID;
@@ -28,26 +57,34 @@ namespace MetacogSDK {
 
 		public API api{ get; private set;}
 
-		//static in order to access it from other G.O.'s
+		/// <summary>
+		/// The logger object implements the logic for periodically send batches of events to the backend.
+		/// </summary>
 		private static Logger logger;
 
-		//store a read-only json version of the current session,
-		//to be added in each call to kinesis
+		///<summary>
+		/// store a read-only json version of the current session,
+		/// to be added in each call to kinesis
+		/// </summary>
 		public string sessionJson{ get; private set;}  
 
 		#endif
 
-
-		/**
-		 * append a event to the queue and eventually, send it to the Metacog platform.
-		 * the developer is responsible of implement custom classes
-		 * for each one of his events. those classes should be
-		 * annoated as serializable. 
-		 * @TODO: note that for playback, we will need to deserialize the data.
-		 * in C#, the target type should be known before hand. 
-		 * it means that we may need to provide some mechanism to register a 
-		 * mapping between event-names and C# Classes.. 
-		 */ 
+		/// <summary>
+		/// Append an event to the queue and eventually, send it to the Metacog platform.
+		/// </summary>
+		/// <description>
+		/// The developer is responsible of implement custom classes
+		/// for each one of his events. those classes should be
+		/// annotated as serializable. 
+		/// @TODO: note that for playback, we will need to deserialize the data.
+		/// in C#, the target type should be known before hand. 
+		/// it means that we may need to provide some mechanism to register a 
+		/// mapping between event-names and C# Classes.. 
+		/// </description>
+		/// <param name="eventName">descriptive label to identify events. i.e. "GameStarted"</param>
+		/// <param name="data">Serializable object</param>
+		/// <param name="eventType"><see cref="Metacog.SDK.EventType"/> </param>
 		public static void Send(string eventName, object data, EventType eventType){
 			#if UNITY_WEBGL
 			string json = JsonUtility.ToJson (data);
@@ -58,7 +95,16 @@ namespace MetacogSDK {
 			#endif
 		}
 
-
+		/// <summary>
+		/// Begins the communication with the metacog platform.
+		/// </summary>
+		/// <description>
+		/// Specific implementation will change according to the target platform:
+		/// for WebGL, authentication and logging will be delegated to the external
+		/// javascript Metacog Client's Library.
+		/// for all the other platforms, the functionality will be executed 
+		/// internally, using the Amazon AWS C# library. 
+		/// </description>
 		public void Start () {
 			#if UNITY_WEBGL
 			StartJS();
@@ -68,10 +114,17 @@ namespace MetacogSDK {
 		}
 
 		#if UNITY_WEBGL
+		///<summary>
+		/// Delegates Metacog's authentication to the external javascript Metacog Client Library. 
+		///</summary>
 		private void StartJS(){
 			Application.ExternalEval("initMetacog('"+buildSessionJson()+"');");
 		}
 		#else
+
+		///<summary>
+		///Initialized 
+		/// </summary>
 		private void StartAWS(){
 			UnityInitializer.AttachToGameObject(this.gameObject);
 			apiEndpoint = //"http://localhost:3000"; 

@@ -99,6 +99,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">MetacogSDK.Metacog Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>MonoBehavior that should be added to the Unity3D project.  
+ <a href="classMetacogSDK_1_1Metacog.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for MetacogSDK.Metacog:</div>
 <div class="dyncontent">
@@ -116,8 +119,8 @@ Collaboration diagram for MetacogSDK.Metacog:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abc4258a6c3a76a3b077d9388ea25b058"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc4258a6c3a76a3b077d9388ea25b058"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Start</b> ()</td></tr>
+<tr class="memitem:abc4258a6c3a76a3b077d9388ea25b058"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetacogSDK_1_1Metacog.html#abc4258a6c3a76a3b077d9388ea25b058">Start</a> ()</td></tr>
+<tr class="memdesc:abc4258a6c3a76a3b077d9388ea25b058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins the communication with the metacog platform.  <a href="#abc4258a6c3a76a3b077d9388ea25b058">More...</a><br /></td></tr>
 <tr class="separator:abc4258a6c3a76a3b077d9388ea25b058"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e454d49db2e9dca3a52b04ef7d2167a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e454d49db2e9dca3a52b04ef7d2167a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> ()</td></tr>
@@ -125,7 +128,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> ()</td></t
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a6283ef2b5e6f75c90700f5021542aea3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetacogSDK_1_1Metacog.html#a6283ef2b5e6f75c90700f5021542aea3">Send</a> (string eventName, object data, EventType eventType)</td></tr>
+<tr class="memitem:a6283ef2b5e6f75c90700f5021542aea3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetacogSDK_1_1Metacog.html#a6283ef2b5e6f75c90700f5021542aea3">Send</a> (string eventName, object data, <a class="el" href="namespaceMetacogSDK.html#a9a46be6b2e98a6ae7460c93faf69728e">EventType</a> eventType)</td></tr>
+<tr class="memdesc:a6283ef2b5e6f75c90700f5021542aea3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append an event to the queue and eventually, send it to the <a class="el" href="classMetacogSDK_1_1Metacog.html" title="MonoBehavior that should be added to the Unity3D project. ">Metacog</a> platform.  <a href="#a6283ef2b5e6f75c90700f5021542aea3">More...</a><br /></td></tr>
 <tr class="separator:a6283ef2b5e6f75c90700f5021542aea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a348e517c0a66e22ed234e08564f5f988"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetacogSDK_1_1Metacog.html#a348e517c0a66e22ed234e08564f5f988">ConvertToUnixTime</a> (DateTime datetime)</td></tr>
 <tr class="memdesc:a348e517c0a66e22ed234e08564f5f988"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a date time object to Unix time representation.  <a href="#a348e517c0a66e22ed234e08564f5f988">More...</a><br /></td></tr>
@@ -167,7 +171,10 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>apiEndpoint</b><cod
 string&#160;</td><td class="memItemRight" valign="bottom"><b>sessionJson</b><code> [get]</code></td></tr>
 <tr class="separator:aeed01d06ccfb7868201a671299458816"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>MonoBehavior that should be added to the Unity3D project. </p>
+<p>expose to Unity's editor the <a class="el" href="classMetacogSDK_1_1Metacog.html" title="MonoBehavior that should be added to the Unity3D project. ">Metacog</a> authentication credentials and also triggers the logger mechanism.  </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a348e517c0a66e22ed234e08564f5f988"></a>
 <div class="memitem">
 <div class="memproto">
@@ -224,7 +231,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>sessionJson</b><cod
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">EventType&#160;</td>
+          <td class="paramtype"><a class="el" href="namespaceMetacogSDK.html#a9a46be6b2e98a6ae7460c93faf69728e">EventType</a>&#160;</td>
           <td class="paramname"><em>eventType</em>&#160;</td>
         </tr>
         <tr>
@@ -239,7 +246,42 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>sessionJson</b><cod
   </tr>
 </table>
 </div><div class="memdoc">
-<p>append a event to the queue and eventually, send it to the <a class="el" href="classMetacogSDK_1_1Metacog.html">Metacog</a> platform. the developer is responsible of implement custom classes for each one of his events. those classes should be annoated as serializable. : note that for playback, we will need to deserialize the data. in C#, the target type should be known before hand. it means that we may need to provide some mechanism to register a mapping between event-names and C# Classes.. </p>
+
+<p>Append an event to the queue and eventually, send it to the <a class="el" href="classMetacogSDK_1_1Metacog.html" title="MonoBehavior that should be added to the Unity3D project. ">Metacog</a> platform. </p>
+<p>The developer is responsible of implement custom classes for each one of his events. those classes should be annotated as serializable. : note that for playback, we will need to deserialize the data. in C#, the target type should be known before hand. it means that we may need to provide some mechanism to register a mapping between event-names and C# Classes..  </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eventName</td><td>descriptive label to identify events. i.e. "GameStarted"</td></tr>
+    <tr><td class="paramname">data</td><td>Serializable object</td></tr>
+    <tr><td class="paramname">eventType</td><td>Metacog.SDK.EventType </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="abc4258a6c3a76a3b077d9388ea25b058"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MetacogSDK.Metacog.Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Begins the communication with the metacog platform. </p>
+<p>Specific implementation will change according to the target platform: for WebGL, authentication and logging will be delegated to the external javascript <a class="el" href="classMetacogSDK_1_1Metacog.html" title="MonoBehavior that should be added to the Unity3D project. ">Metacog</a> Client's Library. for all the other platforms, the functionality will be executed internally, using the Amazon AWS C# library.  summary&gt; Initialized </p>
 
 </div>
 </div>

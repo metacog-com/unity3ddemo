@@ -1,5 +1,10 @@
 \hypertarget{namespaceMetacogSDK}{}\section{Metacog\+S\+DK Namespace Reference}
 \label{namespaceMetacogSDK}\index{Metacog\+S\+DK@{Metacog\+S\+DK}}
+
+
+The \hyperlink{namespaceMetacogSDK}{Metacog\+S\+DK} namespace offer classes to make accessible the \href{}{\tt Metacog platform} services from Unity3D.  
+
+
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
@@ -16,7 +21,7 @@ class \hyperlink{classMetacogSDK_1_1Logger}{Logger}
 class \hyperlink{classMetacogSDK_1_1LoggerJS}{Logger\+JS}
 \item 
 class \hyperlink{classMetacogSDK_1_1Metacog}{Metacog}
-\item 
+\begin{DoxyCompactList}\small\item\em Mono\+Behavior that should be added to the Unity3D project. \end{DoxyCompactList}\item 
 class \hyperlink{classMetacogSDK_1_1MetacogException}{Metacog\+Exception}
 \item 
 class \hyperlink{classMetacogSDK_1_1ProductionEndpoint}{Production\+Endpoint}
@@ -31,8 +36,24 @@ enum {\bfseries Status} \{ {\bfseries I\+D\+LE},
  \}\hypertarget{namespaceMetacogSDK_adb09f0e6c9abe254160c91be5ac0c9b1}{}\label{namespaceMetacogSDK_adb09f0e6c9abe254160c91be5ac0c9b1}
 
 \item 
-enum {\bfseries Event\+Type} \{ {\bfseries M\+O\+D\+EL}, 
+enum \hyperlink{namespaceMetacogSDK_a9a46be6b2e98a6ae7460c93faf69728e}{Event\+Type} \{ {\bfseries M\+O\+D\+EL}, 
 {\bfseries UI}
- \}\hypertarget{namespaceMetacogSDK_a9a46be6b2e98a6ae7460c93faf69728e}{}\label{namespaceMetacogSDK_a9a46be6b2e98a6ae7460c93faf69728e}
-
+ \}\begin{DoxyCompactList}\small\item\em Metacog event required type. use M\+O\+D\+EL for events that represent internal changes, like change on score, and UI for events triggered by the user, like clicking the help button. \end{DoxyCompactList}
 \end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{namespaceMetacogSDK}{Metacog\+S\+DK} namespace offer classes to make accessible the \href{}{\tt Metacog platform} services from Unity3D. 
+
+D\+E\+P\+E\+N\+D\+E\+N\+C\+I\+ES~\newline
+ For no webgl builds it requires the Amazon A\+WS library. Please download it from xxx and add it to your project. ~\newline
+ For Webgl it requires the Javascript \hyperlink{classMetacogSDK_1_1Metacog}{Metacog} Client Library in the container html page. please see the tutorial for details.  
+
+\subsection{Enumeration Type Documentation}
+\index{Metacog\+S\+DK@{Metacog\+S\+DK}!Event\+Type@{Event\+Type}}
+\index{Event\+Type@{Event\+Type}!Metacog\+S\+DK@{Metacog\+S\+DK}}
+\subsubsection[{\texorpdfstring{Event\+Type}{EventType}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Metacog\+S\+D\+K.\+Event\+Type}\hspace{0.3cm}{\ttfamily [strong]}}\hypertarget{namespaceMetacogSDK_a9a46be6b2e98a6ae7460c93faf69728e}{}\label{namespaceMetacogSDK_a9a46be6b2e98a6ae7460c93faf69728e}
+
+
+\hyperlink{classMetacogSDK_1_1Metacog}{Metacog} event required type. use M\+O\+D\+EL for events that represent internal changes, like change on score, and UI for events triggered by the user, like clicking the help button. 
+
