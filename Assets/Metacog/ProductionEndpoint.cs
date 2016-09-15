@@ -34,9 +34,8 @@ namespace MetacogSDK
 		public void init(){
 			mc.api.initKinesis (new API.apiResponse(this.initKinesisResponse));
 		}
-	
-
-		/// <summary>
+		
+    /// <summary>
 		/// Used as delegate in initKinesis call.
 		/// </summary>
 		/// <returns>The kinesis response.</returns>
@@ -76,11 +75,9 @@ namespace MetacogSDK
 					{
 						if (responseObject.Exception == null)
 						{
-							Debug.Log(string.Format("Successfully put record with sequence number '{0}'.", responseObject.Response.SequenceNumber));
 						}
 						else
 						{
-							Debug.Log(responseObject.Exception);
 							//inject the event again for further attempts of sending..
 							eventStorage.Add(batch);
 						}
@@ -104,7 +101,6 @@ namespace MetacogSDK
 				for(int i=0; i< responseObject.Response.Records.Count; ++i){
 					PutRecordsResultEntry entry = responseObject.Response.Records[i];
 					if(entry.ErrorCode != null){
-						Debug.Log("error: " + entry.ErrorCode + " , " + entry.ErrorMessage); 
 						eventStorage.Add(batches[i]);
 					}	
 				}
@@ -123,13 +119,11 @@ namespace MetacogSDK
 		/// <param name="eventStorage">Storage to retrieve events from, and reinsert failed events</param>
 		public void ProcessQueue(EventBuffer eventBuffer, EventStorage eventStorage){
 			if (busy) {
-				Debug.Log ("busy! ignore");
 				return; 
 			}
 			busy = true;
 			if (eventStorage.IsEmpty()) {
 				if (eventBuffer.counter == 0) {
-					Debug.Log ("no events. skip");
 					busy = false;
 					return;
 				} else {
@@ -143,7 +137,6 @@ namespace MetacogSDK
 			while((batch= eventStorage.Pop()) != null && count++ < MAX_BATCHES_PER_REQUEST){
 				MemoryStream memoryStream = new MemoryStream();
 				StreamWriter streamWriter = new StreamWriter(memoryStream);
-				Debug.Log ("batch.Length " + batch.Length);
 				streamWriter.Write(batch);
 				streamWriter.Flush ();
 				PutRecordsRequestEntry entry = new PutRecordsRequestEntry();
