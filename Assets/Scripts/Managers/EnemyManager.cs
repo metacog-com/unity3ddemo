@@ -12,12 +12,11 @@ public class EnemyManager : MonoBehaviour
 
     void Start ()
     {
-		Debug.Log ("STARTING ENEMY MANAGER"); 
-        InvokeRepeating ("Spawn2", spawnTime, spawnTime);
+        InvokeRepeating ("Spawn", spawnTime, spawnTime);
     }
 
 
-    void Spawn2 ()
+    void Spawn()
     {
         if(playerHealth.currentHealth <= 0f)
         {
@@ -25,9 +24,7 @@ public class EnemyManager : MonoBehaviour
         }
 
         int spawnPointIndex = Random.Range (0, spawnPoints.Length);
-		Debug.Log ("instantiating " + enemy.name);
         Instantiate (enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
 		MetacogSDK.Metacog.Send("enemy_new", new EnemyNew(enemy.name), MetacogSDK.EventType.MODEL);
-
     }
 }
