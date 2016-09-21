@@ -52,6 +52,16 @@ namespace MetacogSDK {
 		public string SessionID;
 		public string LearnerToken;
 
+		/// <summary>
+		/// The mode: production by default. other values: playback
+		/// </summary>
+		public string Mode;
+
+		/// <summary>
+		/// enable the log tab in webgl builds. 
+		/// </summary>
+		public bool UseLogTab;
+
 		#if !UNITY_WEBGL
 		public string apiEndpoint{ get; private set;}
 
@@ -88,7 +98,7 @@ namespace MetacogSDK {
 		public static void Send(string eventName, object data, EventType eventType){
 			#if UNITY_WEBGL
 			string json = JsonUtility.ToJson (data);
-			Application.ExternalEval("sendMetacog('"+eventName + "', '"+json+"', '"+eventType+"')");
+			Application.ExternalEval("Metacog.Unity3D.send('"+eventName + "', '"+json+"', '"+eventType+"')");
 			#else
 			if(logger!=null)
 				logger.Send (eventName, data, eventType);
@@ -118,7 +128,14 @@ namespace MetacogSDK {
 		/// Delegates Metacog's authentication to the external javascript Metacog Client Library. 
 		///</summary>
 		private void StartJS(){
-			Application.ExternalEval("initMetacog('"+buildSessionJson()+"');");
+
+			StringBuilder buffer = new StringBuilder (); 
+			buffer.Append ("{ ");
+			buffer.Append ("\"session\":"); buffer.Append (buildSessionJson());
+			buffer.Append (",\"mode\":"); buffer.Append (addAttr (Mode));
+			buffer.Append (",\"log_tab\":"); buffer.Append (this.UseLogTab ? "true" : "false");
+			buffer.Append (" }");
+			Application.ExternalEval("Metacog.Unity3D.init('"+buffer.ToString ()+"');");
 		}
 		#else
 
@@ -223,6 +240,14 @@ namespace MetacogSDK {
 			logger.update (Time.deltaTime);
 			#endif
 		}
+
+		/// <summary>
+		/// Raises the playback event event.
+		/// </summary>
+		/// <param name="evtStr">Evt string.</param>
+		public void OnPlaybackEvent(string evtStr){
+		
+		} 
 	}
 }
 
