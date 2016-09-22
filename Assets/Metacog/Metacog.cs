@@ -246,7 +246,7 @@ namespace MetacogSDK {
 		/// </summary>
 		/// <param name="evtStr">Evt string.</param>
 		public void OnPlaybackEvent(string evtStr){
-		
+			Debug.Log ("got message from javascript: " + evtStr);
 		} 
 	}
 }
