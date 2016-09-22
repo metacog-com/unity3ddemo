@@ -62,6 +62,8 @@ namespace MetacogSDK {
 		/// </summary>
 		public bool UseLogTab;
 
+		private PlaybackController playbackController; 
+
 		#if !UNITY_WEBGL
 		public string apiEndpoint{ get; private set;}
 
@@ -136,6 +138,10 @@ namespace MetacogSDK {
 			buffer.Append (",\"log_tab\":"); buffer.Append (this.UseLogTab ? "true" : "false");
 			buffer.Append (" }");
 			Application.ExternalEval("Metacog.Unity3D.init('"+buffer.ToString ()+"');");
+
+			//there is a playback controller available?
+			this.playbackController = this.GetComponent<PlaybackController>();
+
 		}
 		#else
 
@@ -252,13 +258,17 @@ namespace MetacogSDK {
 			Debug.Log ("got message from javascript: " + evtStr);
 			//split the string 
 			int index = evtStr.IndexOf(":");
-			Debug.Log ("index: " + index);
-			Debug.Log ("Length: " + evtStr.Length);
 			string name = evtStr.Substring (0, index);
 			string json = evtStr.Substring (index + 1, evtStr.Length - index - 1);
 			Debug.Log (name);
 			Debug.Log (json);
-			  
+
+			if (this.playbackController != null) {
+				this.playbackController.onPlaybackEvent (name, json);
+			} else {
+				Debug.Log ("no playback controller found!");
+			}
+						  
 		} 
 	}
 }
