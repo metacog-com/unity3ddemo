@@ -242,11 +242,23 @@ namespace MetacogSDK {
 		}
 
 		/// <summary>
-		/// Raises the playback event event.
+		/// receives a notification from javascript metacog CL, playback router.
+		/// the event is formatted as "event_name@data_as_json" 
+		/// so it has to split the parameter, use the name to retrieve the 
+		/// matching c# class and do the deserialization. 
 		/// </summary>
 		/// <param name="evtStr">Evt string.</param>
 		public void OnPlaybackEvent(string evtStr){
 			Debug.Log ("got message from javascript: " + evtStr);
+			//split the string 
+			int index = evtStr.IndexOf(":");
+			Debug.Log ("index: " + index);
+			Debug.Log ("Length: " + evtStr.Length);
+			string name = evtStr.Substring (0, index);
+			string json = evtStr.Substring (index + 1, evtStr.Length - index - 1);
+			Debug.Log (name);
+			Debug.Log (json);
+			  
 		} 
 	}
 }
