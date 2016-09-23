@@ -2,6 +2,14 @@
 using UnityEngine;
 using MetacogSDK;
 
+/**
+ *test in javascript console:
+
+ evt = {"event":"enemy_attack","data":{"damage":10}}
+
+Metacog.Unity3D.on_event(evt)
+
+*/ 
 namespace MyEvents
 {
 	public class MyPlaybackController: MonoBehaviour, PlaybackController 
